@@ -1,0 +1,13 @@
+{
+  "itemgroup.trivaton": "Trivaton",
+
+  "item.trivaton.thiorite_shard": "Thiorite Shard",
+  "item.trivaton.thiorite_ingot": "Thiorite Ingot",
+  "item.trivaton.enriched_thiorite_shard": "Enriched Thiorite Shard",
+  "item.trivaton.enriched_thiorite_ingot": "Enriched Thiorite Ingot",
+
+  "block.trivaton.thiorite_stone": "Thiorite Stone",
+  "block.trivaton.enriched_thiorite_stone": "Enriched Thiorite Stone",
+  "block.trivaton.sieve": "Sieve",
+  "block.trivaton.circuit_board_crafter": "Circuit Board Crafter"
+}

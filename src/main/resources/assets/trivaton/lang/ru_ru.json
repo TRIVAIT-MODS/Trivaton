@@ -1,0 +1,11 @@
+{
+  "item.trivaton.thiorite_shard": "Осколок тиорита",
+  "item.trivaton.thiorite_ingot": "Тиоритовый слиток",
+  "item.trivaton.enriched_thiorite_shard": "Обогащенный осколок тиорита",
+  "item.trivaton.enriched_thiorite_ingot": "Обогащенный тиоритовый слиток",
+
+  "block.trivaton.thiorite_stone": "Каменный тиорит",
+  "block.trivaton.enriched_thiorite_stone": "Обогащенный каменный тиорит",
+  "block.trivaton.sieve": "Сито",
+  "block.trivaton.circuit_board_crafter": "Верстак плат"
+}

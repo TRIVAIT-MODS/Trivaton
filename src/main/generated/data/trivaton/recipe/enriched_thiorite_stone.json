@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "trivaton:enriched_thiorite_shard"
+    },
+    "T": {
+      "item": "trivaton:thiorite_stone"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "TET",
+    "TTT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "trivaton:enriched_thiorite_stone"
+  }
+}

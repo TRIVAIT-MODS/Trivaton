@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "trivaton:block/stone_thiorite",
+    "side": "trivaton:block/circuit_board_crafter_side",
+    "top": "trivaton:block/circuit_board_crafter_top"
+  }
+}

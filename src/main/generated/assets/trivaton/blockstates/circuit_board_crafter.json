@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "trivaton:block/circuit_board_crafter"
+    }
+  }
+}

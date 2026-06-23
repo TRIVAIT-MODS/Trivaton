@@ -1,0 +1,17 @@
+{
+  "type": "trivaton:sieve",
+  "ingredient": {
+    "item": "trivaton:thiorite_stone"
+  },
+  "result": {
+    "id": "trivaton:thiorite_shard",
+    "count": 1
+  },
+  "extra_results": [
+    {
+      "result": { "id": "trivaton:enriched_thiorite_shard", "count": 1 },
+      "chance": 0.2,
+      "replace": true
+    }
+  ]
+}

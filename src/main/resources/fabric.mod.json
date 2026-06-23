@@ -18,6 +18,9 @@
 		"main": [
 			"org.trivait.trivaton.Trivaton"
 		],
+		"client": [
+			"org.trivait.trivaton.client.TrivatonClient"
+		],
 		"fabric-datagen": [
 			"org.trivait.trivaton.TrivatonDataGenerator"
 		]

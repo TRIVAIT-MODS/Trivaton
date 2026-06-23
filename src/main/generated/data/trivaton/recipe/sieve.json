@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "S": {
+      "item": "minecraft:string"
+    },
+    "T": {
+      "item": "trivaton:thiorite_stone"
+    }
+  },
+  "pattern": [
+    "TST",
+    "C C",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "trivaton:sieve"
+  }
+}

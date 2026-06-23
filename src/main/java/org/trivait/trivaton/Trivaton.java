@@ -6,6 +6,13 @@ import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.trivait.trivaton.block.ModBlocks;
+import org.trivait.trivaton.block.entity.ModBlockEntities;
+import org.trivait.trivaton.gui.ModScreenHandlers;
+import org.trivait.trivaton.item.ModItemGroups;
+import org.trivait.trivaton.item.ModItems;
+import org.trivait.trivaton.recipe.ModRecipes;
+import org.trivait.trivaton.world.gen.ModWorldGeneration;
 
 public class Trivaton implements ModInitializer {
 	public static final String MOD_ID = "trivaton";
@@ -13,7 +20,13 @@ public class Trivaton implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItemGroups.register();
+		ModItems.register();
+		ModBlocks.register();
+		ModBlockEntities.register();
+		ModRecipes.register();
+		ModScreenHandlers.register();
+		ModWorldGeneration.generateModWorldGen();
 	}
 
 	public static Identifier id(String path) {

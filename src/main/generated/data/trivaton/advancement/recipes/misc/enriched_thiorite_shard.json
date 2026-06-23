@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enriched_thiorite_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "trivaton:enriched_thiorite_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "trivaton:enriched_thiorite_shard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enriched_thiorite_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "trivaton:enriched_thiorite_shard"
+    ]
+  }
+}
