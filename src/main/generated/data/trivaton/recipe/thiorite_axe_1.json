@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "trivaton:thiorite_crystal"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "trivaton:thiorite_ingot"
+    }
+  },
+  "pattern": [
+    "TC ",
+    "TS ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "trivaton:thiorite_axe"
+  }
+}

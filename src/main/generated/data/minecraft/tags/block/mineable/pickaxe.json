@@ -3,6 +3,19 @@
     "trivaton:sieve",
     "trivaton:enriched_thiorite_stone",
     "trivaton:circuit_board_crafter",
-    "trivaton:thiorite_stone"
+    "trivaton:thiorite_crystal_generator",
+    "trivaton:thiorite_stone",
+    "trivaton:thiorite_stone_stairs",
+    "trivaton:thiorite_stone_slab",
+    "trivaton:thiorite_stone_wall",
+    "trivaton:polished_thiorite_stone",
+    "trivaton:polished_thiorite_stone_stairs",
+    "trivaton:polished_thiorite_stone_slab",
+    "trivaton:polished_thiorite_stone_wall",
+    "trivaton:thiorite_stone_bricks",
+    "trivaton:thiorite_stone_bricks_stairs",
+    "trivaton:thiorite_stone_bricks_slab",
+    "trivaton:thiorite_block",
+    "trivaton:thiorite_stone_bricks_wall"
   ]
 }

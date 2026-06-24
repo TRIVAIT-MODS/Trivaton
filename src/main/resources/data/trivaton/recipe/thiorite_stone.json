@@ -12,6 +12,11 @@
       "result": { "id": "trivaton:enriched_thiorite_shard", "count": 1 },
       "chance": 0.2,
       "replace": true
+    },
+    {
+      "result": { "id": "trivaton:thiorite_ingot", "count": 1 },
+      "chance": 0.05,
+      "replace": true
     }
   ]
 }

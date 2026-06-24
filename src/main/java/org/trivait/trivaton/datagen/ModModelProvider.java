@@ -15,7 +15,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THIORITE_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THIORITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENRICHED_THIORITE_STONE);
 
         TextureMap circuit_board_textures = new TextureMap()
@@ -27,6 +27,20 @@ public class ModModelProvider extends FabricModelProvider {
                 circuit_board_textures,
                 Models.CUBE_BOTTOM_TOP
         );
+
+        BlockStateModelGenerator.BlockTexturePool thioriteStonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.THIORITE_STONE);
+        thioriteStonePool.stairs(ModBlocks.THIORITE_STONE_STAIRS);
+        thioriteStonePool.slab(ModBlocks.THIORITE_STONE_SLAB);
+        thioriteStonePool.wall(ModBlocks.THIORITE_STONE_WALL);
+        BlockStateModelGenerator.BlockTexturePool polishedThioriteStonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_THIORITE_STONE);
+        polishedThioriteStonePool.stairs(ModBlocks.POLISHED_THIORITE_STONE_STAIRS);
+        polishedThioriteStonePool.slab(ModBlocks.POLISHED_THIORITE_STONE_SLAB);
+        polishedThioriteStonePool.wall(ModBlocks.POLISHED_THIORITE_STONE_WALL);
+        BlockStateModelGenerator.BlockTexturePool thioriteStoneBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.THIORITE_STONE_BRICKS);
+        thioriteStoneBricksPool.stairs(ModBlocks.THIORITE_STONE_BRICKS_STAIRS);
+        thioriteStoneBricksPool.slab(ModBlocks.THIORITE_STONE_BRICKS_SLAB);
+        thioriteStoneBricksPool.wall(ModBlocks.THIORITE_STONE_BRICKS_WALL);
+
     }
 
     @Override
@@ -35,5 +49,20 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.THIORITE_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENRICHED_THIORITE_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENRICHED_THIORITE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CIRCUIT_BOARD_1, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CIRCUIT_BOARD_2, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CIRCUIT_BOARD_3, Models.GENERATED);
+        itemModelGenerator.register(ModItems.THIORITE_CRYSTAL, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.THIORITE_GARNET_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.THIORITE_GARNET_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.THIORITE_GARNET_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.THIORITE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.THIORITE_HAMMER, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.THIORITE_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.THIORITE_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.THIORITE_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.THIORITE_BOOTS, Models.GENERATED);
     }
 }

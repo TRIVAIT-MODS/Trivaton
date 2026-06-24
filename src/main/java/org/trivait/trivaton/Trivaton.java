@@ -2,6 +2,7 @@ package org.trivait.trivaton;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
@@ -12,6 +13,7 @@ import org.trivait.trivaton.gui.ModScreenHandlers;
 import org.trivait.trivaton.item.ModItemGroups;
 import org.trivait.trivaton.item.ModItems;
 import org.trivait.trivaton.recipe.ModRecipes;
+import org.trivait.trivaton.util.HammerUsageEvent;
 import org.trivait.trivaton.world.gen.ModWorldGeneration;
 
 public class Trivaton implements ModInitializer {
@@ -27,6 +29,8 @@ public class Trivaton implements ModInitializer {
 		ModRecipes.register();
 		ModScreenHandlers.register();
 		ModWorldGeneration.generateModWorldGen();
+
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 	}
 
 	public static Identifier id(String path) {

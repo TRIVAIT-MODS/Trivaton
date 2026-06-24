@@ -1,0 +1,13 @@
+{
+  "type": "trivaton:circuit_board_crafter",
+  "is_shaped": true,
+  "ingredients": [
+    { "item": "minecraft:redstone" }, { "item": "trivaton:enriched_thiorite_shard" }, { "item": "minecraft:redstone" },
+    { "item": "minecraft:iron_ingot" }, { "item": "trivaton:thiorite_ingot" }, { "item": "minecraft:iron_ingot" },
+    { "item": "minecraft:redstone" }, { "item": "minecraft:diamond" }, { "item": "minecraft:redstone" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "trivaton:circuit_board_1"
+  }
+}

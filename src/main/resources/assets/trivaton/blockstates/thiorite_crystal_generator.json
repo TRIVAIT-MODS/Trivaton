@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "crystal_stage=0": {
+      "model": "trivaton:block/thiorite_crystal_generator_0"
+    },
+    "crystal_stage=1": {
+      "model": "trivaton:block/thiorite_crystal_generator_1"
+    },
+    "crystal_stage=2": {
+      "model": "trivaton:block/thiorite_crystal_generator_2"
+    },
+    "crystal_stage=3": {
+      "model": "trivaton:block/thiorite_crystal_generator_3"
+    },
+    "crystal_stage=4": {
+      "model": "trivaton:block/thiorite_crystal_generator_4"
+    }
+  }
+}

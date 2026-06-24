@@ -1,0 +1,22 @@
+{
+  "type": "trivaton:sieve",
+  "ingredient": {
+    "item": "minecraft:sand"
+  },
+  "result": {
+    "id": "minecraft:air",
+    "count": 1
+  },
+  "extra_results": [
+    {
+      "result": { "id": "minecraft:nautilus_shell", "count": 1 },
+      "chance": 0.05,
+      "replace": false
+    },
+    {
+      "result": { "id": "minecraft:gold_nugget", "count": 1 },
+      "chance": 0.1,
+      "replace": false
+    }
+  ]
+}

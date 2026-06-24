@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "trivaton:thiorite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "trivaton:thiorite_ingot"
+  }
+}

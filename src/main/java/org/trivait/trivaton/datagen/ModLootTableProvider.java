@@ -18,5 +18,18 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SIEVE);
         addDrop(ModBlocks.ENRICHED_THIORITE_STONE);
         addDrop(ModBlocks.CIRCUIT_BOARD_CRAFTER);
+        addDrop(ModBlocks.THIORITE_CRYSTAL_GENERATOR);
+        addDrop(ModBlocks.THIORITE_BLOCK);
+        addDrop(ModBlocks.THIORITE_STONE_STAIRS);
+        addDrop(ModBlocks.THIORITE_STONE_SLAB);
+        addDrop(ModBlocks.THIORITE_STONE_WALL);
+        addDrop(ModBlocks.POLISHED_THIORITE_STONE);
+        addDrop(ModBlocks.POLISHED_THIORITE_STONE_STAIRS);
+        addDrop(ModBlocks.POLISHED_THIORITE_STONE_SLAB);
+        addDrop(ModBlocks.POLISHED_THIORITE_STONE_WALL);
+        addDrop(ModBlocks.THIORITE_STONE_BRICKS);
+        addDrop(ModBlocks.THIORITE_STONE_BRICKS_STAIRS);
+        addDrop(ModBlocks.THIORITE_STONE_BRICKS_SLAB);
+        addDrop(ModBlocks.THIORITE_STONE_BRICKS_WALL);
     }
 }

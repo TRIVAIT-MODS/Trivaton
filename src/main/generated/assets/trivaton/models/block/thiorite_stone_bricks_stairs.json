@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "trivaton:block/thiorite_stone_bricks",
+    "side": "trivaton:block/thiorite_stone_bricks",
+    "top": "trivaton:block/thiorite_stone_bricks"
+  }
+}

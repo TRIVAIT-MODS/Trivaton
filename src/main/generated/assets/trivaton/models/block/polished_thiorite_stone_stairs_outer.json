@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "trivaton:block/polished_thiorite_stone",
+    "side": "trivaton:block/polished_thiorite_stone",
+    "top": "trivaton:block/polished_thiorite_stone"
+  }
+}

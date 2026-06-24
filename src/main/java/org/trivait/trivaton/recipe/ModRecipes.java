@@ -19,6 +19,18 @@ public class ModRecipes {
                 }
             }
     );
+    public static final RecipeSerializer<CircuitBoardCrafterRecipe> CIRCUIT_BOARD_CRAFTER_SERIALIZER = Registry.register(
+            Registries.RECIPE_SERIALIZER, Trivaton.id("circuit_board_crafter"),
+            new CircuitBoardCrafterRecipe.Serializer()
+    );
+    public static final RecipeType<CircuitBoardCrafterRecipe> CIRCUIT_BOARD_CRAFTER_TYPE = Registry.register(
+            Registries.RECIPE_TYPE, Trivaton.id("circuit_board_crafter"), new RecipeType<CircuitBoardCrafterRecipe>() {
+                @Override
+                public String toString() {
+                    return "circuit_board_crafter";
+                }
+            }
+    );
 
     public static void register() {
 

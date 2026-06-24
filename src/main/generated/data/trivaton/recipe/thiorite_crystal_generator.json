@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "trivaton:enriched_thiorite_stone"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "T": {
+      "item": "trivaton:polished_thiorite_stone"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GEG",
+    "TTT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "trivaton:thiorite_crystal_generator"
+  }
+}

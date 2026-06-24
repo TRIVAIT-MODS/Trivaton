@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "trivaton:block/polished_thiorite_stone_slab"
+    },
+    "type=double": {
+      "model": "trivaton:block/polished_thiorite_stone"
+    },
+    "type=top": {
+      "model": "trivaton:block/polished_thiorite_stone_slab_top"
+    }
+  }
+}

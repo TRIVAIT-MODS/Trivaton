@@ -48,6 +48,7 @@ public class SieveBlockEntity extends BlockEntity implements ExtendedScreenHandl
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
     private int maxProgress = 120;
+    private boolean isCrafting = false;
 
     public SieveBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.SIEVE_BE, pos, state);
@@ -166,6 +167,7 @@ public class SieveBlockEntity extends BlockEntity implements ExtendedScreenHandl
     public void tick(World world, BlockPos pos, BlockState state) {
         if (hasRecipe()) {
             increaseCraftingProgress();
+            isCrafting = true;
             markDirty();
 
             if (hasCraftingFinished()) {
@@ -174,9 +176,10 @@ public class SieveBlockEntity extends BlockEntity implements ExtendedScreenHandl
             }
         } else if (progress > 0) {
             --progress;
+            isCrafting = false;
             markDirty();
         }
-        if (isCrafting()) {
+        if (isCrafting() && isCrafting) {
             if (progress % 6 == 0){
                 world.playSound(null, pos, SoundEvents.BLOCK_SUSPICIOUS_SAND_STEP, SoundCategory.BLOCKS, 1f, 2f);
             }

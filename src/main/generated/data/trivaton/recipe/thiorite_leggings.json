@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "trivaton:thiorite_crystal"
+    },
+    "T": {
+      "item": "trivaton:thiorite_ingot"
+    }
+  },
+  "pattern": [
+    "TCT",
+    "T T",
+    "T T"
+  ],
+  "result": {
+    "count": 1,
+    "id": "trivaton:thiorite_leggings"
+  }
+}
