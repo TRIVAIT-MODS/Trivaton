@@ -1,0 +1,10 @@
+{
+  "trivaton": {
+    "sounds": [
+      {
+        "name": "trivaton:trivaton",
+        "stream": true
+      }
+    ]
+  }
+}

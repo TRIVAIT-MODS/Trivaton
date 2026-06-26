@@ -10,52 +10,26 @@ import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
-import net.minecraft.particle.ItemStackParticleEffect;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RotationAxis;
 import net.minecraft.world.LightType;
 import net.minecraft.world.World;
 import org.trivait.trivaton.block.entity.custom.SieveBlockEntity;
 
-import java.util.Random;
-
 public class SieveBlockEntityRenderer implements BlockEntityRenderer<SieveBlockEntity> {
-    private int particleCooldown = 0;
 
     public SieveBlockEntityRenderer(BlockEntityRendererFactory.Context context) {
-
     }
-
 
     @Override
     public void render(SieveBlockEntity entity, float tickDelta, MatrixStack matrices,
                        VertexConsumerProvider vertexConsumers, int light, int overlay) {
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
-        ItemStack result = entity.getStack(1);
         ItemStack ingredient = entity.getStack(0);
-
-        particleCooldown++;
-        if (particleCooldown>=8) {
-            particleCooldown = 0;
-            if (!ingredient.isEmpty() && entity.isCrafting()) {
-                Random random = new Random();
-                entity.getWorld().addParticle(
-                        new ItemStackParticleEffect(ParticleTypes.ITEM, ingredient),
-                        entity.getPos().getX() + 0.5,
-                        entity.getPos().getY() + 0.9-((double) entity.getProgress() /200),
-                        entity.getPos().getZ() + 0.5,
-                        random.nextDouble(-0.15, 0.15),
-                        random.nextDouble(0.1, 0.15),
-                        random.nextDouble(-0.15, 0.15)
-                );
-            }
-        }
 
         matrices.push();
         matrices.translate(0.5, 0.1, 0.5);
         matrices.scale(0.6f, 0.6f, 0.6f);
-
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(90));
 
         ItemStack result1 = entity.getStack(1);
@@ -81,7 +55,6 @@ public class SieveBlockEntityRenderer implements BlockEntityRenderer<SieveBlockE
                 matrices.translate(-0.05, -0.01, 0.05);
             }
         }
-
         ItemStack result2 = entity.getStack(2);
         matrices.translate(-0.4, 0, 0);
         if (!result2.isEmpty()) {
@@ -211,15 +184,15 @@ public class SieveBlockEntityRenderer implements BlockEntityRenderer<SieveBlockE
 
         matrices.translate(-0.4, 1.36, 0.4);
 
-        if (ingredient.getCount()>1){
+        if (ingredient.getCount() > 1) {
             matrices.translate(0.5, 0, -0.5);
             itemRenderer.renderItem(ingredient, ModelTransformationMode.FIXED, getLightingLevel(entity.getWorld(), entity.getPos()),
                     OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
-            if (ingredient.getCount()>3){
+            if (ingredient.getCount() > 3) {
                 matrices.translate(0.05, 0.01, -0.05);
                 itemRenderer.renderItem(ingredient, ModelTransformationMode.FIXED, getLightingLevel(entity.getWorld(), entity.getPos()),
                         OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
-                if (ingredient.getCount()>6){
+                if (ingredient.getCount() > 6) {
                     matrices.translate(0.05, 0.01, -0.05);
                     itemRenderer.renderItem(ingredient, ModelTransformationMode.FIXED, getLightingLevel(entity.getWorld(), entity.getPos()),
                             OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
@@ -230,7 +203,7 @@ public class SieveBlockEntityRenderer implements BlockEntityRenderer<SieveBlockE
             matrices.translate(-0.5, 0, 0.5);
         }
 
-        matrices.translate(0, -((double) entity.getProgress() /220), 0);
+        matrices.translate(0, -((double) entity.getProgress() / 220), 0);
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(90));
         itemRenderer.renderItem(ingredient, ModelTransformationMode.FIXED, getLightingLevel(entity.getWorld(), entity.getPos()),
                 OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
@@ -242,7 +215,6 @@ public class SieveBlockEntityRenderer implements BlockEntityRenderer<SieveBlockE
     private int getLightingLevel(World world, BlockPos pos) {
         int bLight = world.getLightLevel(LightType.BLOCK, pos);
         int sLight = world.getLightLevel(LightType.SKY, pos);
-
         return LightmapTextureManager.pack(bLight, sLight);
     }
 }

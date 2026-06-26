@@ -48,6 +48,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CIRCUIT_BOARD_1);
                         entries.add(ModItems.CIRCUIT_BOARD_2);
                         entries.add(ModItems.CIRCUIT_BOARD_3);
+                        entries.add(ModItems.CREATIVE_CIRCUIT_BOARD);
 
                         entries.add(ModItems.THIORITE_GARNET_PICKAXE);
                         entries.add(ModItems.THIORITE_GARNET_AXE);
@@ -60,6 +61,8 @@ public class ModItemGroups {
                         entries.add(ModItems.THIORITE_BOOTS);
 
                         entries.add(ModItems.THIORITE_HAMMER);
+
+                        entries.add(ModItems.TRIVATON_MUSIC_DISC);
                     }).build());
 
     public static void register() {

@@ -6,6 +6,7 @@
   "item.trivaton.circuit_board_1": "Плата",
   "item.trivaton.circuit_board_2": "Плата",
   "item.trivaton.circuit_board_3": "Плата",
+  "item.trivaton.creative_circuit_board": "Творческая плата",
   "item.trivaton.circuit_board.desc": "Уровень: ",
   "item.trivaton.circuit_board.desc2": "Энергии осталось: ",
   "item.trivaton.thiorite_crystal": "Тиоритовый кристал",
@@ -18,6 +19,8 @@
   "item.trivaton.thiorite_chestplate": "Тиоритовый нагрудник",
   "item.trivaton.thiorite_boots": "Тиоритовые ботинки",
   "item.trivaton.thiorite_hammer": "Тиоритовый молот",
+
+  "item.trivaton.trivaton_music_disc": "Пластинка",
 
   "block.trivaton.thiorite_stone": "Каменный тиорит",
   "block.trivaton.enriched_thiorite_stone": "Обогащенный каменный тиорит",

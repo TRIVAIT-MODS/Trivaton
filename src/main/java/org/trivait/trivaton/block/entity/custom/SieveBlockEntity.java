@@ -11,6 +11,8 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
+import net.minecraft.particle.ItemStackParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
@@ -23,6 +25,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.trivait.trivaton.block.entity.ImplementedInventory;
@@ -165,24 +168,44 @@ public class SieveBlockEntity extends BlockEntity implements ExtendedScreenHandl
     }
 
     public void tick(World world, BlockPos pos, BlockState state) {
-        if (hasRecipe()) {
-            increaseCraftingProgress();
-            isCrafting = true;
-            markDirty();
+        if (!world.isClient) {
+            if (hasRecipe()) {
+                increaseCraftingProgress();
+                isCrafting = true;
+                markDirty();
 
-            if (hasCraftingFinished()) {
-                craftItem();
-                resetProgress();
+                if (hasCraftingFinished()) {
+                    craftItem();
+                    resetProgress();
+                }
+            } else if (progress > 0) {
+                --progress;
+                isCrafting = false;
+                markDirty();
             }
-        } else if (progress > 0) {
-            --progress;
-            isCrafting = false;
-            markDirty();
+            if (isCrafting() && isCrafting) {
+                if (progress % 6 == 0) {
+                    world.playSound(null, pos, SoundEvents.BLOCK_SUSPICIOUS_SAND_STEP, SoundCategory.BLOCKS, 1f, 2f);
+                }
+            }
         }
-        if (isCrafting() && isCrafting) {
-            if (progress % 6 == 0){
-                world.playSound(null, pos, SoundEvents.BLOCK_SUSPICIOUS_SAND_STEP, SoundCategory.BLOCKS, 1f, 2f);
+
+        if (world.isClient) {
+            if (this.isCrafting() && !inventory.get(INPUT_SLOT).isEmpty()) {
+                if (this.getProgress() % 2 == 0) {
+                    Random random = world.getRandom();
+                    world.addParticle(
+                            new ItemStackParticleEffect(ParticleTypes.ITEM, this.getStack(0)),
+                            pos.getX() + 0.5,
+                            pos.getY() + 0.95 - ((double) this.getProgress() / 200),
+                            pos.getZ() + 0.5,
+                            random.nextTriangular(0.0, 0.15),
+                            random.nextTriangular(0.12, 0.03),
+                            random.nextTriangular(0.0, 0.15)
+                    );
+                }
             }
+            return;
         }
     }
 

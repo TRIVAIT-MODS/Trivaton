@@ -5,10 +5,14 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.Unit;
 import org.trivait.trivaton.Trivaton;
+import org.trivait.trivaton.item.component.ModDataComponentTypes;
 import org.trivait.trivaton.item.custom.CircuitBoardItem;
+import org.trivait.trivaton.item.custom.CreativeCircuitBoardItem;
 import org.trivait.trivaton.item.custom.HammerItem;
+import org.trivait.trivaton.sound.ModSounds;
 
 public class ModItems {
 
@@ -23,6 +27,7 @@ public class ModItems {
     public static final Item CIRCUIT_BOARD_1 = registerItem("circuit_board_1", new CircuitBoardItem(new Item.Settings().maxDamage(1000), 1));
     public static final Item CIRCUIT_BOARD_2 = registerItem("circuit_board_2", new CircuitBoardItem(new Item.Settings().maxDamage(1100), 2));
     public static final Item CIRCUIT_BOARD_3 = registerItem("circuit_board_3", new CircuitBoardItem(new Item.Settings().maxDamage(1250), 3));
+    public static final Item CREATIVE_CIRCUIT_BOARD = registerItem("creative_circuit_board", new CreativeCircuitBoardItem(new Item.Settings().component(ModDataComponentTypes.CREATIVE_CIRCUIT_BOARD_LEVEL, 10).rarity(Rarity.EPIC).maxDamage(Integer.MAX_VALUE)));
 
     public static final Item THIORITE_SWORD = registerItem("thiorite_sword",
             new SwordItem(ModToolMaterials.THIORITE, new Item.Settings()
@@ -53,6 +58,9 @@ public class ModItems {
     public static final Item THIORITE_HAMMER = registerItem("thiorite_hammer",
             new HammerItem(ModToolMaterials.THIORITE, new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.THIORITE, 7, -3.4f))));
+
+    public static final Item TRIVATON_MUSIC_DISC = registerItem("trivaton_music_disc",
+            new Item(new Item.Settings().jukeboxPlayable(ModSounds.TRIVATON_KEY).maxCount(1)));
 
     private static Item registerItem(String id, Item item) {
         return Registry.register(Registries.ITEM, Trivaton.id(id), item);

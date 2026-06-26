@@ -69,10 +69,6 @@ public class SieveBlock extends BlockWithEntity implements BlockEntityProvider {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        if(world.isClient()) {
-            return null;
-        }
-
         return validateTicker(type, ModBlockEntities.SIEVE_BE,
                 (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }

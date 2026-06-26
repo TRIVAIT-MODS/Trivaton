@@ -85,7 +85,7 @@ public class CircuitBoardCrafterBlockEntity extends BlockEntity implements Exten
     private int getCircuitBoardBoost() {
         if (!inventory.get(CIRCUIT_BOARD_SLOT).isEmpty()) {
             if (inventory.get(CIRCUIT_BOARD_SLOT).getItem() instanceof CircuitBoardItem circuitBoardItem) {
-                return circuitBoardItem.getLevel();
+                return circuitBoardItem.getLevel(inventory.get(CIRCUIT_BOARD_SLOT));
             }
         }
         return 0;
@@ -154,7 +154,11 @@ public class CircuitBoardCrafterBlockEntity extends BlockEntity implements Exten
                 if (durabilityCooldown >= 5) {
                     durabilityCooldown = 0;
                     ItemStack boardStack = inventory.get(CIRCUIT_BOARD_SLOT);
-                    boardStack.damage(1, ((ServerWorld) world), null, item -> {});
+                    int durability = boardStack.getMaxDamage() - boardStack.getDamage();
+                    if (durability>0) {
+                        boardStack.damage(1, ((ServerWorld) world), null, item -> {
+                        });
+                    }
                 }
             }
 
@@ -199,6 +203,13 @@ public class CircuitBoardCrafterBlockEntity extends BlockEntity implements Exten
         this.maxProgress = 600;
     }
 
+    private boolean isCircuitBoardBreak() {
+        ItemStack boardStack = inventory.get(CIRCUIT_BOARD_SLOT);
+        if (boardStack.isEmpty()) return false;
+        int durability = boardStack.getMaxDamage() - boardStack.getDamage();
+        return !(durability>0);
+    }
+
     private void craftItem() {
         Optional<RecipeEntry<CircuitBoardCrafterRecipe>> recipe = getCurrentRecipe();
         if (recipe.isEmpty()) return;
@@ -224,6 +235,7 @@ public class CircuitBoardCrafterBlockEntity extends BlockEntity implements Exten
     }
 
     private boolean hasRecipe() {
+        if (isCircuitBoardBreak()) return false;
         Optional<RecipeEntry<CircuitBoardCrafterRecipe>> recipe = getCurrentRecipe();
         if (recipe.isEmpty()) {
             return false;

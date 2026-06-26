@@ -29,7 +29,7 @@ public class CircuitBoardItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        Text text = Text.translatable("item.trivaton.circuit_board.desc").setStyle(Style.EMPTY.withColor(Formatting.GRAY)).append(Text.literal(""+level).setStyle(Style.EMPTY.withColor(Formatting.AQUA)));
+        Text text = Text.translatable("item.trivaton.circuit_board.desc").setStyle(Style.EMPTY.withColor(Formatting.GRAY)).append(Text.literal(""+getLevel(stack)).setStyle(Style.EMPTY.withColor(Formatting.AQUA)));
 
         tooltip.add(text);
 
@@ -46,9 +46,9 @@ public class CircuitBoardItem extends Item {
         super.appendTooltip(stack, context, tooltip, type);
     }
 
-    public int getLevel() {
-        int maxDamage = new ItemStack(this).getMaxDamage();
-        int currentDamage = new ItemStack(this).getDamage();
+    public int getLevel(ItemStack stack) {
+        int maxDamage = stack.getMaxDamage();
+        int currentDamage = stack.getDamage();
         int currentDurability = maxDamage - currentDamage;
 
         return currentDurability != 0 ? level : 0;

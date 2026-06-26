@@ -1,5 +1,6 @@
 package org.trivait.trivaton.recipe;
 
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.item.ItemStack;
@@ -16,12 +17,13 @@ import net.minecraft.world.World;
 import java.util.ArrayList;
 import java.util.List;
 
-public record SieveRecipe(Ingredient inputItem, ItemStack output, List<ExtraOutput> extraOutputs) implements Recipe<SieveRecipeInput> {
+public record SieveRecipe(Ingredient inputItem, ItemStack output, boolean emptyGeneral, List<ExtraOutput> extraOutputs) implements Recipe<SieveRecipeInput> {
 
-    public SieveRecipe {
-        if (extraOutputs.size() > 5) {
-            extraOutputs = extraOutputs.subList(0, 5);
-        }
+    public SieveRecipe(Ingredient inputItem, ItemStack output, boolean emptyGeneral, List<ExtraOutput> extraOutputs) {
+        this.inputItem = inputItem;
+        this.output = emptyGeneral ? ItemStack.EMPTY : output;
+        this.emptyGeneral = emptyGeneral;
+        this.extraOutputs = extraOutputs.size() > 5 ? extraOutputs.subList(0, 5) : extraOutputs;
     }
 
     @Override
@@ -46,7 +48,9 @@ public record SieveRecipe(Ingredient inputItem, ItemStack output, List<ExtraOutp
                 if (extra.replace()) {
                     finalResult = extra.stack().copy();
                 } else {
-                    if (ItemStack.areItemsAndComponentsEqual(finalResult, extra.stack())) {
+                    if (finalResult.isEmpty()) {
+                        finalResult = extra.stack().copy();
+                    } else if (ItemStack.areItemsAndComponentsEqual(finalResult, extra.stack())) {
                         finalResult.increment(extra.stack().getCount());
                     } else {
                         return extra.stack().copy();
@@ -80,7 +84,8 @@ public record SieveRecipe(Ingredient inputItem, ItemStack output, List<ExtraOutp
     public static class Serializer implements RecipeSerializer<SieveRecipe> {
         public static final MapCodec<SieveRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
                 Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("ingredient").forGetter(SieveRecipe::inputItem),
-                ItemStack.CODEC.fieldOf("result").forGetter(SieveRecipe::output),
+                ItemStack.CODEC.optionalFieldOf("result", ItemStack.EMPTY).forGetter(SieveRecipe::output),
+                Codec.BOOL.optionalFieldOf("emptyGeneral", false).forGetter(SieveRecipe::emptyGeneral),
                 ExtraOutput.CODEC.listOf().optionalFieldOf("extra_results", new ArrayList<>()).forGetter(SieveRecipe::extraOutputs)
         ).apply(inst, SieveRecipe::new));
 

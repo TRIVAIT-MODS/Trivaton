@@ -7,6 +7,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
@@ -23,6 +24,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.trivait.trivaton.block.ModBlocks;
@@ -111,6 +113,34 @@ public class ThioriteCrystalGenratorBlockEntity extends BlockEntity implements E
         super.readNbt(nbt, registryLookup);
     }
 
+    @Override
+    public int[] getAvailableSlots(Direction side) {
+        return new int[]{0, 1, 2, 3};
+    }
+
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction dir) {
+        if (slot == 3) {
+            return false;
+        }
+        if (slot == 0) {
+            return stack.getItem() instanceof CircuitBoardItem;
+        }
+        if (slot == 1) {
+            return stack.isOf(ModItems.THIORITE_INGOT);
+        }
+        if (slot == 2) {
+            return stack.isOf(Items.BONE_MEAL);
+        }
+
+        return false;
+    }
+
+    @Override
+    public boolean canExtract(int slot, ItemStack stack, Direction dir) {
+        return slot == 3;
+    }
+
     public int getStage() {
         if (maxProgress <= 0 || progress <= 0) {
             return 0;
@@ -174,7 +204,11 @@ public class ThioriteCrystalGenratorBlockEntity extends BlockEntity implements E
 
         if (isCrafting && progress % 5 == 0) {
             ItemStack boardStack = inventory.get(CIRCUIT_BOARD_SLOT);
-            boardStack.damage(1, ((ServerWorld) world), null, item -> {});
+            int durability = boardStack.getMaxDamage() - boardStack.getDamage();
+            if (durability>0) {
+                boardStack.damage(1, ((ServerWorld) world), null, item -> {
+                });
+            }
         }
 
         if (lastStage != getStage()) {
@@ -207,15 +241,23 @@ public class ThioriteCrystalGenratorBlockEntity extends BlockEntity implements E
     private int getCircuitBoardPower() {
         ItemStack stack = inventory.get(CIRCUIT_BOARD_SLOT);
         if (stack.isEmpty() || !(stack.getItem() instanceof CircuitBoardItem)) return 0;
-        return ((CircuitBoardItem) stack.getItem()).getLevel();
+        return ((CircuitBoardItem) stack.getItem()).getLevel(inventory.get(CIRCUIT_BOARD_SLOT));
     }
 
     private boolean canCraft() {
         if (inventory.get(BONE_MEAL_SLOT).isEmpty()) return false;
         if (inventory.get(INPUT_SLOT).isEmpty()) return false;
+        if (isCircuitBoardBreak()) return false;
         ItemStack output = new ItemStack(ModItems.THIORITE_CRYSTAL);
 
         return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+    }
+
+    private boolean isCircuitBoardBreak() {
+        ItemStack boardStack = inventory.get(CIRCUIT_BOARD_SLOT);
+        if (boardStack.isEmpty()) return false;
+        int durability = boardStack.getMaxDamage() - boardStack.getDamage();
+        return !(durability>0);
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {

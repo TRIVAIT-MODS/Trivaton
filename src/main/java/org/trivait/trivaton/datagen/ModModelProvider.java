@@ -64,5 +64,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.THIORITE_CHESTPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.THIORITE_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModItems.THIORITE_BOOTS, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.CREATIVE_CIRCUIT_BOARD, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.TRIVATON_MUSIC_DISC, Models.GENERATED);
     }
 }

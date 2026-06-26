@@ -8,6 +8,7 @@
   "item.trivaton.circuit_board_1": "Circuit Board",
   "item.trivaton.circuit_board_2": "Circuit Board",
   "item.trivaton.circuit_board_3": "Circuit Board",
+  "item.trivaton.creative_circuit_board": "Creative Circuit Board",
   "item.trivaton.circuit_board.desc": "Level: ",
   "item.trivaton.circuit_board.desc2": "Energy left: ",
   "item.trivaton.thiorite_crystal": "Thiorite Crystal",
@@ -20,6 +21,9 @@
   "item.trivaton.thiorite_chestplate": "Thiorite Chestplate",
   "item.trivaton.thiorite_boots": "Thiorite Boots",
   "item.trivaton.thiorite_hammer": "Thiorite Hammer",
+
+  "item.trivaton.trivaton_music_disc": "Music Disc",
+  "item.trivaton.trivaton_music_disc.desc": "_ - Trivaton",
 
   "block.trivaton.thiorite_stone": "Thiorite Stone",
   "block.trivaton.enriched_thiorite_stone": "Enriched Thiorite Stone",

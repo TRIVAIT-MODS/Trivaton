@@ -1,10 +1,13 @@
 package org.trivait.trivaton.client;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.text.TranslatableTextContent;
+import org.trivait.trivaton.block.ModBlocks;
 import org.trivait.trivaton.block.entity.ModBlockEntities;
 import org.trivait.trivaton.block.entity.renderer.SieveBlockEntityRenderer;
 import org.trivait.trivaton.gui.ModScreenHandlers;
@@ -28,5 +31,8 @@ public class TrivatonClient implements ClientModInitializer {
                         && "item.durability".equals(translatable.getKey()));
             }
         });
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SIEVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.THIORITE_CRYSTAL_GENERATOR, RenderLayer.getCutout());
     }
 }

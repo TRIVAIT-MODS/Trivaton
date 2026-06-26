@@ -3,10 +3,7 @@
   "ingredient": {
     "item": "minecraft:sand"
   },
-  "result": {
-    "id": "minecraft:air",
-    "count": 1
-  },
+  "emptyGeneral": true,
   "extra_results": [
     {
       "result": { "id": "minecraft:nautilus_shell", "count": 1 },
