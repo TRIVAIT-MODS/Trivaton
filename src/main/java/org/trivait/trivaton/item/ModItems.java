@@ -1,12 +1,9 @@
 package org.trivait.trivaton.item;
 
-import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import net.minecraft.util.Unit;
 import org.trivait.trivaton.Trivaton;
 import org.trivait.trivaton.item.component.ModDataComponentTypes;
 import org.trivait.trivaton.item.custom.CircuitBoardItem;
@@ -32,13 +29,13 @@ public class ModItems {
     public static final Item THIORITE_SWORD = registerItem("thiorite_sword",
             new SwordItem(ModToolMaterials.THIORITE, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.THIORITE, 3, -2.4F))));
-    public static final Item THIORITE_GARNET_PICKAXE = registerItem("thiorite_pickaxe",
+    public static final Item THIORITE_PICKAXE = registerItem("thiorite_pickaxe",
             new PickaxeItem(ModToolMaterials.THIORITE, new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.THIORITE, 1, -2.8f))));
-    public static final Item THIORITE_GARNET_SHOVEL = registerItem("thiorite_shovel",
+    public static final Item THIORITE_SHOVEL = registerItem("thiorite_shovel",
             new ShovelItem(ModToolMaterials.THIORITE, new Item.Settings()
                     .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.THIORITE, 1.5f, -3.0f))));
-    public static final Item THIORITE_GARNET_AXE = registerItem("thiorite_axe",
+    public static final Item THIORITE_AXE = registerItem("thiorite_axe",
             new AxeItem(ModToolMaterials.THIORITE, new Item.Settings()
                     .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.THIORITE, 6, -3.0f))));
 

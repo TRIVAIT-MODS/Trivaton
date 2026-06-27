@@ -15,6 +15,7 @@ import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.particle.BlockStateParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -180,12 +181,20 @@ public class ThioriteCrystalGenratorBlockEntity extends BlockEntity implements E
 
         if (isCrafting && progress > 0) {
             int speed = Math.max(1, getCircuitBoardPower());
-            int interval = Math.max(1, maxProgress / 10);
 
-            int previousMilestone = (progress - speed) / interval;
-            int currentMilestone = progress / interval;
+            int previousProgress = progress - speed;
+            int currentProgress = progress;
 
-            if (currentMilestone > previousMilestone && currentMilestone <= 10) {
+            int interval = Math.max(1, (maxProgress - 1) / 10);
+
+            int previousMilestone = previousProgress / interval;
+            int currentMilestone = currentProgress / interval;
+
+            if (currentMilestone > previousMilestone
+                    && currentMilestone <= 10) {
+
+                inventory.get(BONE_MEAL_SLOT).decrement(1);
+
                 ((ServerWorld) world).spawnParticles(
                         ParticleTypes.COMPOSTER,
                         pos.getX() + 0.5,
@@ -197,8 +206,15 @@ public class ThioriteCrystalGenratorBlockEntity extends BlockEntity implements E
                         0.2,
                         0
                 );
-                world.playSound(null, pos, SoundEvents.ITEM_BONE_MEAL_USE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                inventory.get(BONE_MEAL_SLOT).decrement(1);
+
+                world.playSound(
+                        null,
+                        pos,
+                        SoundEvents.ITEM_BONE_MEAL_USE,
+                        SoundCategory.BLOCKS,
+                        1.0F,
+                        1.0F
+                );
             }
         }
 

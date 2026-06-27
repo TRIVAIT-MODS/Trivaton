@@ -3,7 +3,6 @@ package org.trivait.trivaton.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -33,9 +32,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.THIORITE_STONE_BRICKS_WALL);
 
                         entries.add(ModBlocks.ENRICHED_THIORITE_STONE);
+
                         entries.add(ModBlocks.SIEVE);
                         entries.add(ModBlocks.CIRCUIT_BOARD_CRAFTER);
                         entries.add(ModBlocks.THIORITE_CRYSTAL_GENERATOR);
+                        entries.add(ModBlocks.GENERATOR);
 
                         entries.add(ModBlocks.THIORITE_BLOCK);
 
@@ -50,9 +51,9 @@ public class ModItemGroups {
                         entries.add(ModItems.CIRCUIT_BOARD_3);
                         entries.add(ModItems.CREATIVE_CIRCUIT_BOARD);
 
-                        entries.add(ModItems.THIORITE_GARNET_PICKAXE);
-                        entries.add(ModItems.THIORITE_GARNET_AXE);
-                        entries.add(ModItems.THIORITE_GARNET_SHOVEL);
+                        entries.add(ModItems.THIORITE_PICKAXE);
+                        entries.add(ModItems.THIORITE_AXE);
+                        entries.add(ModItems.THIORITE_SHOVEL);
                         entries.add(ModItems.THIORITE_SWORD);
 
                         entries.add(ModItems.THIORITE_HELMET);

@@ -3,7 +3,7 @@ package org.trivait.trivaton.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
-import net.minecraft.util.Identifier;
+import net.minecraft.item.ArmorItem;
 import org.trivait.trivaton.Trivaton;
 import org.trivait.trivaton.block.ModBlocks;
 import org.trivait.trivaton.item.ModItems;
@@ -54,16 +54,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CIRCUIT_BOARD_3, Models.GENERATED);
         itemModelGenerator.register(ModItems.THIORITE_CRYSTAL, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.THIORITE_GARNET_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.THIORITE_GARNET_AXE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.THIORITE_GARNET_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.THIORITE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.THIORITE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.THIORITE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.THIORITE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.THIORITE_HAMMER, Models.HANDHELD);
 
-        itemModelGenerator.register(ModItems.THIORITE_HELMET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.THIORITE_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.THIORITE_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.THIORITE_BOOTS, Models.GENERATED);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.THIORITE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.THIORITE_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.THIORITE_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.THIORITE_BOOTS);
 
         itemModelGenerator.register(ModItems.CREATIVE_CIRCUIT_BOARD, Models.GENERATED);
 

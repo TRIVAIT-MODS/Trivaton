@@ -1,0 +1,19 @@
+{
+  "type": "trivaton:sieve",
+  "ingredient": {
+    "tag": "minecraft:dirt"
+  },
+  "emptyGeneral": true,
+  "extra_results": [
+    {
+      "result": { "id": "minecraft:gravel", "count": 1 },
+      "chance": 0.2,
+      "replace": false
+    },
+    {
+      "result": { "id": "minecraft:hanging_roots", "count": 1 },
+      "chance": 0.3,
+      "replace": false
+    }
+  ]
+}

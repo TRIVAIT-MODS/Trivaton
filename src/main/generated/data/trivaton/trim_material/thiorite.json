@@ -1,0 +1,9 @@
+{
+  "asset_name": "thiorite",
+  "description": {
+    "color": "#757575",
+    "translate": "trim_material.trivaton.thiorite"
+  },
+  "ingredient": "trivaton:thiorite_ingot",
+  "item_model_index": 0.3
+}

@@ -1,0 +1,22 @@
+{
+  "type": "trivaton:sieve",
+  "ingredient": {
+    "tag": "minecraft:emerald_ores"
+  },
+  "result": {
+    "id": "minecraft:emerald",
+    "count": 1
+  },
+  "extra_results": [
+    {
+      "result": { "id": "minecraft:emerald", "count": 1 },
+      "chance": 0.1,
+      "replace": false
+    },
+    {
+      "result": { "id": "minecraft:emerald", "count": 1 },
+      "chance": 0.03,
+      "replace": false
+    }
+  ]
+}

@@ -1,1 +1,11 @@
-// 1.21.1	2026-06-26T15:44:51.5201287	Trivaton/Tags for minecraft:item
+// 1.21.1	2026-06-27T23:05:57.4221947	Trivaton/Tags for minecraft:item
+6e49f6f39fcef8ef1daa8eac3d8570d6f41abe6b data\minecraft\tags\item\pickaxes.json
+40446003b6f4c68070da0038e797c7935475cea2 data\minecraft\tags\item\trimmable_armor.json
+20443ed0df3184c2006eb3eed7d2a47ecb3af321 data\minecraft\tags\item\axes.json
+3120f0d403dc44c75d4b2992b44434702363dfd1 data\minecraft\tags\item\shovels.json
+f66e9748f98ed90e090a98f365893b09de964995 data\minecraft\tags\item\foot_armor.json
+95499562152e52c8d7fdda29e59016656731b019 data\minecraft\tags\item\leg_armor.json
+78099aa7fa058de7017761ecb1fea9bf12977bdc data\minecraft\tags\item\trim_materials.json
+95c81c5b50cf58aba5a8a9638572a9c9f082cd83 data\minecraft\tags\item\swords.json
+c808747bda127b850d2709e5de22d4bc12c5c8a1 data\minecraft\tags\item\head_armor.json
+636dccd731bef28cc3f658c234bf5419bfd3a670 data\minecraft\tags\item\chest_armor.json

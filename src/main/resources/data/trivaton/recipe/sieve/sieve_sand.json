@@ -1,13 +1,13 @@
 {
   "type": "trivaton:sieve",
   "ingredient": {
-    "item": "minecraft:sand"
+    "tag": "minecraft:sand"
   },
   "emptyGeneral": true,
   "extra_results": [
     {
       "result": { "id": "minecraft:nautilus_shell", "count": 1 },
-      "chance": 0.05,
+      "chance": 0.001,
       "replace": false
     },
     {

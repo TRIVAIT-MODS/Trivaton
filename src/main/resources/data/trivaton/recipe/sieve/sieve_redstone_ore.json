@@ -1,0 +1,22 @@
+{
+  "type": "trivaton:sieve",
+  "ingredient": {
+    "tag": "minecraft:redstone_ores"
+  },
+  "result": {
+    "id": "minecraft:redstone",
+    "count": 3
+  },
+  "extra_results": [
+    {
+      "result": { "id": "minecraft:redstone", "count": 3 },
+      "chance": 0.1,
+      "replace": false
+    },
+    {
+      "result": { "id": "minecraft:redstone", "count": 2 },
+      "chance": 0.1,
+      "replace": false
+    }
+  ]
+}

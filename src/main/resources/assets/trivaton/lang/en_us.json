@@ -41,5 +41,8 @@
   "block.trivaton.thiorite_stone_bricks_stairs": "Thiorite Stone Brick Stairs",
   "block.trivaton.thiorite_stone_bricks_slab": "Thiorite Stone Brick Slab",
   "block.trivaton.thiorite_stone_bricks_wall": "Thiorite Stone Brick Wall",
-  "block.trivaton.thiorite_block": "Block of Thiorite"
+  "block.trivaton.thiorite_block": "Block of Thiorite",
+  "block.trivaton.generator": "Generator",
+
+  "trim_material.trivaton.thiorite": "Trhiorite"
 }

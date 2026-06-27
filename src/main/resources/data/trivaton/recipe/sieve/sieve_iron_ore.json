@@ -1,0 +1,22 @@
+{
+  "type": "trivaton:sieve",
+  "ingredient": {
+    "tag": "minecraft:iron_ores"
+  },
+  "result": {
+    "id": "minecraft:raw_iron",
+    "count": 1
+  },
+  "extra_results": [
+    {
+      "result": { "id": "minecraft:raw_iron", "count": 1 },
+      "chance": 0.1,
+      "replace": false
+    },
+    {
+      "result": { "id": "minecraft:raw_iron", "count": 1 },
+      "chance": 0.1,
+      "replace": false
+    }
+  ]
+}

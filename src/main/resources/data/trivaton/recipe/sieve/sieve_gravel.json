@@ -1,0 +1,19 @@
+{
+  "type": "trivaton:sieve",
+  "ingredient": {
+    "item": "minecraft:gravel"
+  },
+  "emptyGeneral": true,
+  "extra_results": [
+    {
+      "result": { "id": "minecraft:flint", "count": 1 },
+      "chance": 0.3,
+      "replace": false
+    },
+    {
+      "result": { "id": "minecraft:gold_nugget", "count": 1 },
+      "chance": 0.1,
+      "replace": false
+    }
+  ]
+}

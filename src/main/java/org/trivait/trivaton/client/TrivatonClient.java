@@ -34,5 +34,6 @@ public class TrivatonClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SIEVE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.THIORITE_CRYSTAL_GENERATOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GENERATOR, RenderLayer.getCutout());
     }
 }

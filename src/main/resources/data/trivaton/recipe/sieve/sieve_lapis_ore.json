@@ -1,0 +1,22 @@
+{
+  "type": "trivaton:sieve",
+  "ingredient": {
+    "tag": "minecraft:lapis_ores"
+  },
+  "result": {
+    "id": "minecraft:lapis_lazuli",
+    "count": 4
+  },
+  "extra_results": [
+    {
+      "result": { "id": "minecraft:lapis_lazuli", "count": 3 },
+      "chance": 0.1,
+      "replace": false
+    },
+    {
+      "result": { "id": "minecraft:lapis_lazuli", "count": 3 },
+      "chance": 0.1,
+      "replace": false
+    }
+  ]
+}

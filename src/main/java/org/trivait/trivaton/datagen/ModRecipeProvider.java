@@ -10,14 +10,11 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import org.trivait.trivaton.Trivaton;
 import org.trivait.trivaton.block.ModBlocks;
-import org.trivait.trivaton.item.ModItemGroups;
 import org.trivait.trivaton.item.ModItems;
 
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
@@ -59,6 +56,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('P', ItemTags.PLANKS)
                 .criterion(hasItem(ModItems.ENRICHED_THIORITE_INGOT), conditionsFromItem(ModItems.ENRICHED_THIORITE_INGOT))
                 .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GENERATOR)
+                .pattern("TCT")
+                .pattern("GIG")
+                .pattern("TST")
+                .input('T', ModBlocks.POLISHED_THIORITE_STONE)
+                .input('C', ModItems.THIORITE_CRYSTAL)
+                .input('G', Blocks.GLASS)
+                .input('I', Blocks.IRON_BLOCK)
+                .input('S', Blocks.SMOOTH_STONE)
+                .criterion(hasItem(ModItems.THIORITE_CRYSTAL), conditionsFromItem(ModItems.THIORITE_CRYSTAL))
+                .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.THIORITE_HAMMER)
                 .pattern("TCT")
@@ -78,7 +86,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('G', Blocks.GLASS)
                 .criterion(hasItem(ModBlocks.ENRICHED_THIORITE_STONE), conditionsFromItem(ModBlocks.ENRICHED_THIORITE_STONE))
                 .offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.THIORITE_GARNET_AXE)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.THIORITE_AXE)
                 .pattern("TC ")
                 .pattern("TS ")
                 .pattern(" S ")
@@ -87,7 +95,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('C', ModItems.THIORITE_CRYSTAL)
                 .criterion(hasItem(ModItems.THIORITE_CRYSTAL), conditionsFromItem(ModItems.THIORITE_CRYSTAL))
                 .offerTo(exporter, Trivaton.id("thiorite_axe_1"));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.THIORITE_GARNET_AXE)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.THIORITE_AXE)
                 .pattern(" CT")
                 .pattern(" ST")
                 .pattern(" S ")
@@ -96,7 +104,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('C', ModItems.THIORITE_CRYSTAL)
                 .criterion(hasItem(ModItems.THIORITE_CRYSTAL), conditionsFromItem(ModItems.THIORITE_CRYSTAL))
                 .offerTo(exporter, Trivaton.id("thiorite_axe_2"));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.THIORITE_GARNET_SHOVEL)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.THIORITE_SHOVEL)
                 .pattern(" C ")
                 .pattern(" S ")
                 .pattern(" S ")
@@ -104,7 +112,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('C', ModItems.THIORITE_CRYSTAL)
                 .criterion(hasItem(ModItems.THIORITE_CRYSTAL), conditionsFromItem(ModItems.THIORITE_CRYSTAL))
                 .offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.THIORITE_GARNET_PICKAXE)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.THIORITE_PICKAXE)
                 .pattern("TCT")
                 .pattern(" S ")
                 .pattern(" S ")

@@ -8,6 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import org.trivait.trivaton.Trivaton;
 import org.trivait.trivaton.block.custom.CircuitBoardCrafterBlock;
+import org.trivait.trivaton.block.custom.GeneratorBlock;
 import org.trivait.trivaton.block.custom.SieveBlock;
 import org.trivait.trivaton.block.custom.ThioriteCrystalGeneratorBlock;
 
@@ -46,6 +47,7 @@ public class ModBlocks {
             new SlabBlock(AbstractBlock.Settings.copy(Blocks.TUFF_SLAB)));
 
     public static final Block THIORITE_BLOCK = registerBlock("thiorite_block", new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+    public static final Block GENERATOR = registerBlock("generator", new GeneratorBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
 
     private static Block registerBlock(String name, Block block){
         Identifier id = Trivaton.id(name);

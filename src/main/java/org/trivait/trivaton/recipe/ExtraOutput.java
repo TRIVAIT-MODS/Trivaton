@@ -15,7 +15,6 @@ public record ExtraOutput(ItemStack stack, float chance, boolean replace) {
             Codec.BOOL.optionalFieldOf("replace", false).forGetter(ExtraOutput::replace)
     ).apply(inst, ExtraOutput::new));
 
-    // Исправлено: сетевой кодек генерируется напрямую из JSON кодека
     public static final PacketCodec<RegistryByteBuf, ExtraOutput> STREAM_CODEC =
-            PacketCodecs.codec(CODEC).cast(); // Добавили .cast() для апкаста буфера
+            PacketCodecs.codec(CODEC).cast();
 }
