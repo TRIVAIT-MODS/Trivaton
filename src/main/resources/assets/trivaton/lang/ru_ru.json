@@ -19,6 +19,7 @@
   "item.trivaton.thiorite_chestplate": "Тиоритовый нагрудник",
   "item.trivaton.thiorite_boots": "Тиоритовые ботинки",
   "item.trivaton.thiorite_hammer": "Тиоритовый молот",
+  "item.trivaton.mythium_ingot": "Мифийный слиток",
 
   "item.trivaton.trivaton_music_disc": "Пластинка",
 
@@ -41,5 +42,7 @@
   "block.trivaton.thiorite_block": "Тиоритовый блок",
   "block.trivaton.generator": "Генератор",
 
-  "trim_material.trivaton.thiorite": "Тиоритовая"
+  "trim_material.trivaton.thiorite": "Тиоритовая",
+
+  "sounds.trivaton.generator": "Шум генератора"
 }

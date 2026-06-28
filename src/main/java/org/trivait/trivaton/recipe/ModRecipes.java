@@ -31,6 +31,18 @@ public class ModRecipes {
                 }
             }
     );
+    public static final RecipeSerializer<GeneratorRecipe> GENERATOR_SERIALIZER = Registry.register(
+            Registries.RECIPE_SERIALIZER, Trivaton.id("generator"),
+            new GeneratorRecipe.Serializer()
+    );
+    public static final RecipeType<GeneratorRecipe> GENERATOR_TYPE = Registry.register(
+            Registries.RECIPE_TYPE, Trivaton.id("generator"), new RecipeType<GeneratorRecipe>() {
+                @Override
+                public String toString() {
+                    return "generator";
+                }
+            }
+    );
 
     public static void register() {
 

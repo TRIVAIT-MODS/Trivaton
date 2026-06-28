@@ -21,6 +21,7 @@
   "item.trivaton.thiorite_chestplate": "Thiorite Chestplate",
   "item.trivaton.thiorite_boots": "Thiorite Boots",
   "item.trivaton.thiorite_hammer": "Thiorite Hammer",
+  "item.trivaton.mythium_ingot": "Mythium Ingot",
 
   "item.trivaton.trivaton_music_disc": "Music Disc",
   "item.trivaton.trivaton_music_disc.desc": "_ - Trivaton",
@@ -44,5 +45,7 @@
   "block.trivaton.thiorite_block": "Block of Thiorite",
   "block.trivaton.generator": "Generator",
 
-  "trim_material.trivaton.thiorite": "Trhiorite"
+  "trim_material.trivaton.thiorite": "Trhiorite",
+
+  "sounds.trivaton.generator": "Generator Noise"
 }

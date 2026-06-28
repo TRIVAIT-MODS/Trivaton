@@ -1,0 +1,36 @@
+{
+  "type": "trivaton:generator",
+  "center": {
+    "item": "trivaton:thiorite_crystal"
+  },
+  "sides": [
+    {
+      "item": "trivaton:enriched_thiorite_shard"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "trivaton:thiorite_shard"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "trivaton:enriched_thiorite_shard"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "trivaton:thiorite_shard"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "trivaton:mythium_ingot"
+  }
+}

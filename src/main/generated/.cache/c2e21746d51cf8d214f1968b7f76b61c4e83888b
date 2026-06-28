@@ -1,4 +1,4 @@
-// 1.21.1	2026-06-27T23:05:57.4247139	Trivaton/Model Definitions
+// 1.21.1	2026-06-28T23:11:39.7523909	Trivaton/Model Definitions
 9494d613ae36c0dcc78a424c201f5e51519ed236 assets\trivaton\models\item\thiorite_leggings_quartz_trim.json
 de6b5f4d8d020cb3fac5099689865501145e3128 assets\trivaton\models\block\thiorite_stone_stairs_inner.json
 7395d06df773d1b0602b19b327abe6c801c976e4 assets\trivaton\models\block\thiorite_stone_bricks.json
@@ -17,6 +17,7 @@ c55d0181cfff8d433dc3b2fe11df68e80d685ed7 assets\trivaton\models\item\thiorite_ch
 bac7f64c57e609afe3f8264d178e2893103be2c6 assets\trivaton\blockstates\polished_thiorite_stone_wall.json
 b62c659d3d9d4b0bdccd90dfe5a2832c3c7395a6 assets\trivaton\blockstates\circuit_board_crafter.json
 6ec2e72330faa1da5be10dbb7f85a4ebc3924c6e assets\trivaton\models\item\thiorite_crystal.json
+93d4383c5fe7e81f3b54925b59d32819a0537907 assets\trivaton\models\item\mythium_ingot.json
 737f23b7b0c90390ee1c3a63c4cd53ef5ceb7e83 assets\trivaton\models\item\thiorite_boots_diamond_trim.json
 03f53430b2f602e7e61dcc1c48ded1e85f2043d6 assets\trivaton\blockstates\polished_thiorite_stone.json
 ed2c71ad218249134700c60b4ac3143bc007c36a assets\trivaton\blockstates\thiorite_stone_bricks_wall.json
@@ -28,8 +29,8 @@ d23f84288f4fba9ed635c3b2b4bf10c55a924770 assets\trivaton\models\block\thiorite_s
 38a9dd4a515db47c150e7b17ba4951050255bad1 assets\trivaton\models\block\polished_thiorite_stone_stairs.json
 88d394d6fa8696d30d3683c190d84d48b2c0fd77 assets\trivaton\models\block\thiorite_stone_wall_post.json
 d2304f2bbc00c6fb9d0e04323db0553b6d16d79f assets\trivaton\blockstates\thiorite_stone_slab.json
-3a94cfd2342fe4096c3f1d3251c250fe5c631310 assets\trivaton\models\block\polished_thiorite_stone_stairs_outer.json
 73d5c76ec0a90301243e891b863267ca37e96ae9 assets\trivaton\models\item\thiorite_boots_gold_trim.json
+3a94cfd2342fe4096c3f1d3251c250fe5c631310 assets\trivaton\models\block\polished_thiorite_stone_stairs_outer.json
 f9c20b8d979bba9c76f000c519cf5c192d8b780a assets\trivaton\models\item\thiorite_stone_bricks_wall.json
 f1c7cf15c1285f056ca249acb17bce109b33ad50 assets\trivaton\models\item\thiorite_chestplate_diamond_trim.json
 2cb0677ca0992a73722f8496d0a86c0ffd8d5274 assets\trivaton\models\item\thiorite_sword.json

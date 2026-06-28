@@ -57,7 +57,9 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.THIORITE, 7, -3.4f))));
 
     public static final Item TRIVATON_MUSIC_DISC = registerItem("trivaton_music_disc",
-            new Item(new Item.Settings().jukeboxPlayable(ModSounds.TRIVATON_KEY).maxCount(1)));
+            new Item(new Item.Settings().jukeboxPlayable(ModSounds.TRIVATON_KEY).maxCount(1).rarity(Rarity.RARE)));
+
+    public static final Item MYTHIUM_INGOT = registerItem("mythium_ingot", new Item(new Item.Settings()));
 
     private static Item registerItem(String id, Item item) {
         return Registry.register(Registries.ITEM, Trivaton.id(id), item);

@@ -1,4 +1,10 @@
 {
+  "generator": {
+    "subtitle": "sounds.trivaton.generator",
+    "sounds": [
+      "trivaton:generator"
+    ]
+  },
   "trivaton": {
     "sounds": [
       {

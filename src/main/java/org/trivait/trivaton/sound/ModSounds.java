@@ -9,6 +9,7 @@ import net.minecraft.sound.SoundEvent;
 import org.trivait.trivaton.Trivaton;
 
 public class ModSounds {
+    public static final SoundEvent GENERATOR = registerSoundEvent("generator");
     public static final SoundEvent TRIVATON = registerSoundEvent("trivaton");
     public static final RegistryKey<JukeboxSong> TRIVATON_KEY =
             RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Trivaton.id("trivaton"));

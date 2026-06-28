@@ -7,6 +7,7 @@ import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.math.BlockPos;
 import org.trivait.trivaton.Trivaton;
 import org.trivait.trivaton.gui.custom.CircuitBoardCrafterScreenHandler;
+import org.trivait.trivaton.gui.custom.GeneratorScreenHandler;
 import org.trivait.trivaton.gui.custom.ThioriteCrystalGenratorScreenHandler;
 import org.trivait.trivaton.gui.custom.SieveScreenHandler;
 
@@ -20,6 +21,9 @@ public class ModScreenHandlers {
     public static final ScreenHandlerType<ThioriteCrystalGenratorScreenHandler> THIORITE_CRYSTAL_GENERATOR_SCREEN_HANDLER =
             Registry.register(Registries.SCREEN_HANDLER, Trivaton.id("thiorite_crystal_generator_screen_handler"),
                     new ExtendedScreenHandlerType<>(ThioriteCrystalGenratorScreenHandler::new, BlockPos.PACKET_CODEC));
+    public static final ScreenHandlerType<GeneratorScreenHandler> GENERATOR_SCREEN_HANDLER =
+            Registry.register(Registries.SCREEN_HANDLER, Trivaton.id("generator_screen_handler"),
+                    new ExtendedScreenHandlerType<>(GeneratorScreenHandler::new, BlockPos.PACKET_CODEC));
 
     public static void register() {
 

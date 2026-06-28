@@ -15,10 +15,7 @@ import org.trivait.trivaton.block.ModBlocks;
 import org.trivait.trivaton.gui.ModScreenHandlers;
 import org.trivait.trivaton.gui.custom.*;
 import org.trivait.trivaton.item.ModItems;
-import org.trivait.trivaton.recipe.CircuitBoardCrafterRecipe;
-import org.trivait.trivaton.recipe.ModRecipes;
-import org.trivait.trivaton.recipe.SieveRecipe;
-import org.trivait.trivaton.recipe.ThioriteCrystalGeneratorRecipe;
+import org.trivait.trivaton.recipe.*;
 
 import java.util.List;
 
@@ -54,6 +51,13 @@ public class TrivatonJeiPlugin implements IModPlugin {
         );
         registration.addRecipeCategories(
                 new ThioriteCrystalGeneratorCategory(
+                        registration
+                                .getJeiHelpers()
+                                .getGuiHelper()
+                )
+        );
+        registration.addRecipeCategories(
+                new GeneratorCategory(
                         registration
                                 .getJeiHelpers()
                                 .getGuiHelper()
@@ -103,6 +107,16 @@ public class TrivatonJeiPlugin implements IModPlugin {
                         )
                 )
         );
+        List<GeneratorRecipe> generatorRecipes =
+                recipeManager.listAllOfType(ModRecipes.GENERATOR_TYPE)
+                        .stream()
+                        .map(RecipeEntry::value)
+                        .toList();
+
+        registration.addRecipes(
+                GeneratorCategory.TYPE,
+                generatorRecipes
+        );
     }
 
     @Override
@@ -121,6 +135,10 @@ public class TrivatonJeiPlugin implements IModPlugin {
         registration.addRecipeCatalyst(
                 new ItemStack(ModBlocks.THIORITE_CRYSTAL_GENERATOR),
                 ThioriteCrystalGeneratorCategory.TYPE
+        );
+        registration.addRecipeCatalyst(
+                new ItemStack(ModBlocks.GENERATOR),
+                GeneratorCategory.TYPE
         );
     }
 
@@ -152,6 +170,14 @@ public class TrivatonJeiPlugin implements IModPlugin {
                 24,
                 ThioriteCrystalGeneratorCategory.TYPE
         );
+        registration.addRecipeClickArea(
+                GeneratorScreen.class,
+                105,
+                35,
+                24,
+                16,
+                GeneratorCategory.TYPE
+        );
     }
     @Override
     public void registerRecipeTransferHandlers(IRecipeTransferRegistration registration) {
@@ -168,6 +194,13 @@ public class TrivatonJeiPlugin implements IModPlugin {
                 SieveRecipeCategory.TYPE,
                 0, 1,
                 7, 36
+        );
+        registration.addRecipeTransferHandler(
+                GeneratorScreenHandler.class,
+                ModScreenHandlers.GENERATOR_SCREEN_HANDLER,
+                GeneratorCategory.TYPE,
+                0, 10,
+                11, 36
         );
     }
 }

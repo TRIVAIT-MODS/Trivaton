@@ -30,6 +30,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 "thiorite_block_from_thiorite_ingots", null,
                 "thiorite_ingot_from_thiorite_block", null);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRIVATON_MUSIC_DISC)
+                .pattern("T  ")
+                .pattern(" E ")
+                .pattern("  M")
+                .input('T', ModItems.THIORITE_INGOT)
+                .input('E', ModItems.ENRICHED_THIORITE_INGOT)
+                .input('M', ModItems.MYTHIUM_INGOT)
+                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
+                .offerTo(exporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SIEVE)
                 .pattern("TST")
                 .pattern("C C")
