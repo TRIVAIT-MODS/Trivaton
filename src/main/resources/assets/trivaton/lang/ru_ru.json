@@ -20,6 +20,17 @@
   "item.trivaton.thiorite_boots": "Тиоритовые ботинки",
   "item.trivaton.thiorite_hammer": "Тиоритовый молот",
   "item.trivaton.mythium_ingot": "Мифийный слиток",
+  "item.trivaton.mythium_axe": "Мифийный топор",
+  "item.trivaton.mythium_pickaxe": "Мифийная кирка",
+  "item.trivaton.mythium_shovel": "Мифийная лопата",
+  "item.trivaton.mythium_sword": "Мифийный меч",
+  "item.trivaton.mythium_helmet": "Мифийный шлем",
+  "item.trivaton.mythium_leggings": "Мифийные поножи",
+  "item.trivaton.mythium_chestplate": "Мифийный нагрудник",
+  "item.trivaton.mythium_boots": "Мифийные ботинки",
+  "item.trivaton.mythium_hammer": "Мифийный молот",
+
+  "item.trivaton.hammer.desc": "Копает ",
 
   "item.trivaton.trivaton_music_disc": "Пластинка",
 
@@ -41,8 +52,10 @@
   "block.trivaton.thiorite_stone_bricks_wall": "Ограда из тиоритовых каменных кирпичей",
   "block.trivaton.thiorite_block": "Тиоритовый блок",
   "block.trivaton.generator": "Генератор",
+  "block.trivaton.mythium_block": "Мифийный блок",
 
   "trim_material.trivaton.thiorite": "Тиоритовая",
+  "trim_material.trivaton.mythium": "Мифийная",
 
   "sounds.trivaton.generator": "Шум генератора"
 }

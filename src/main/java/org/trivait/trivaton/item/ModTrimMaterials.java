@@ -18,11 +18,13 @@ import java.util.Map;
 
 public class ModTrimMaterials {
     public static final RegistryKey<ArmorTrimMaterial> THIORITE = RegistryKey.of(RegistryKeys.TRIM_MATERIAL, Trivaton.id("thiorite"));
+    public static final RegistryKey<ArmorTrimMaterial> MYTHIUM = RegistryKey.of(RegistryKeys.TRIM_MATERIAL, Trivaton.id("mythium"));
 
     public static void bootstrap(Registerable<ArmorTrimMaterial> registerable) {
         register(registerable, THIORITE, Registries.ITEM.getEntry(ModItems.THIORITE_INGOT),
                 Style.EMPTY.withColor(TextColor.parse("#757575").getOrThrow()), 0.3f);
-
+        register(registerable, MYTHIUM, Registries.ITEM.getEntry(ModItems.MYTHIUM_INGOT),
+                Style.EMPTY.withColor(TextColor.parse("#0094FF").getOrThrow()), 0.9f);
     }
 
     private static void register(Registerable<ArmorTrimMaterial> registerable, RegistryKey<ArmorTrimMaterial> armorTrimKey,

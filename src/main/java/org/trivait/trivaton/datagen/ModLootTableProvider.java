@@ -32,5 +32,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.THIORITE_STONE_BRICKS_SLAB);
         addDrop(ModBlocks.THIORITE_STONE_BRICKS_WALL);
         addDrop(ModBlocks.GENERATOR);
+        addDrop(ModBlocks.MYTHIUM_BLOCK);
     }
 }

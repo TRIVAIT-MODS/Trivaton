@@ -3,6 +3,10 @@
     "trivaton:thiorite_helmet",
     "trivaton:thiorite_chestplate",
     "trivaton:thiorite_leggings",
-    "trivaton:thiorite_boots"
+    "trivaton:thiorite_boots",
+    "trivaton:mythium_helmet",
+    "trivaton:mythium_chestplate",
+    "trivaton:mythium_leggings",
+    "trivaton:mythium_boots"
   ]
 }

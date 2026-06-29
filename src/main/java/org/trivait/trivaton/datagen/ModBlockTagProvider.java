@@ -33,6 +33,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.THIORITE_STONE_BRICKS_SLAB)
                 .add(ModBlocks.THIORITE_BLOCK)
                 .add(ModBlocks.GENERATOR)
+                .add(ModBlocks.MYTHIUM_BLOCK)
                 .add(ModBlocks.THIORITE_STONE_BRICKS_WALL);
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.SIEVE)
@@ -52,6 +53,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.THIORITE_STONE_BRICKS_SLAB)
                 .add(ModBlocks.THIORITE_BLOCK)
                 .add(ModBlocks.GENERATOR)
+                .add(ModBlocks.MYTHIUM_BLOCK)
                 .add(ModBlocks.THIORITE_STONE_BRICKS_WALL);
     }
 }

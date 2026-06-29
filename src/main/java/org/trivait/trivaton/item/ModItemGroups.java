@@ -13,7 +13,7 @@ import org.trivait.trivaton.block.ModBlocks;
 public class ModItemGroups {
     public static final ItemGroup TRIVATON = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Trivaton.MOD_ID, "trivaton"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.THIORITE_STONE))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.THIORITE_CRYSTAL))
                     .displayName(Text.translatable("itemgroup.trivaton"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.THIORITE_STONE);
@@ -38,10 +38,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.THIORITE_CRYSTAL_GENERATOR);
                         entries.add(ModBlocks.GENERATOR);
 
-                        entries.add(ModBlocks.THIORITE_BLOCK);
-
                         entries.add(ModItems.THIORITE_SHARD);
                         entries.add(ModItems.THIORITE_INGOT);
+                        entries.add(ModBlocks.THIORITE_BLOCK);
                         entries.add(ModItems.ENRICHED_THIORITE_SHARD);
                         entries.add(ModItems.ENRICHED_THIORITE_INGOT);
                         entries.add(ModItems.THIORITE_CRYSTAL);
@@ -66,6 +65,16 @@ public class ModItemGroups {
                         entries.add(ModItems.TRIVATON_MUSIC_DISC);
 
                         entries.add(ModItems.MYTHIUM_INGOT);
+                        entries.add(ModBlocks.MYTHIUM_BLOCK);
+                        entries.add(ModItems.MYTHIUM_PICKAXE);
+                        entries.add(ModItems.MYTHIUM_AXE);
+                        entries.add(ModItems.MYTHIUM_SHOVEL);
+                        entries.add(ModItems.MYTHIUM_SWORD);
+                        entries.add(ModItems.MYTHIUM_HELMET);
+                        entries.add(ModItems.MYTHIUM_CHESTPLATE);
+                        entries.add(ModItems.MYTHIUM_LEGGINGS);
+                        entries.add(ModItems.MYTHIUM_BOOTS);
+                        entries.add(ModItems.MYTHIUM_HAMMER);
                     }).build());
 
     public static void register() {

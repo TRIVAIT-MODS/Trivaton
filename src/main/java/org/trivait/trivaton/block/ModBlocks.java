@@ -47,7 +47,10 @@ public class ModBlocks {
             new SlabBlock(AbstractBlock.Settings.copy(Blocks.TUFF_SLAB)));
 
     public static final Block THIORITE_BLOCK = registerBlock("thiorite_block", new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+
     public static final Block GENERATOR = registerBlock("generator", new GeneratorBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+
+    public static final Block MYTHIUM_BLOCK = registerBlock("mythium_block", new Block(AbstractBlock.Settings.copy(Blocks.LAPIS_BLOCK)));
 
     private static Block registerBlock(String name, Block block){
         Identifier id = Trivaton.id(name);

@@ -9,6 +9,7 @@ import org.trivait.trivaton.item.component.ModDataComponentTypes;
 import org.trivait.trivaton.item.custom.CircuitBoardItem;
 import org.trivait.trivaton.item.custom.CreativeCircuitBoardItem;
 import org.trivait.trivaton.item.custom.HammerItem;
+import org.trivait.trivaton.item.custom.MythiumHammerItem;
 import org.trivait.trivaton.sound.ModSounds;
 
 public class ModItems {
@@ -60,6 +61,34 @@ public class ModItems {
             new Item(new Item.Settings().jukeboxPlayable(ModSounds.TRIVATON_KEY).maxCount(1).rarity(Rarity.RARE)));
 
     public static final Item MYTHIUM_INGOT = registerItem("mythium_ingot", new Item(new Item.Settings()));
+    public static final Item MYTHIUM_SWORD = registerItem("mythium_sword",
+            new SwordItem(ModToolMaterials.MYTHIUM, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.MYTHIUM, 3, -2.4F))));
+    public static final Item MYTHIUM_PICKAXE = registerItem("mythium_pickaxe",
+            new PickaxeItem(ModToolMaterials.MYTHIUM, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.MYTHIUM, 1, -2.8f))));
+    public static final Item MYTHIUM_SHOVEL = registerItem("mythium_shovel",
+            new ShovelItem(ModToolMaterials.MYTHIUM, new Item.Settings()
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.MYTHIUM, 1.5f, -3.0f))));
+    public static final Item MYTHIUM_AXE = registerItem("mythium_axe",
+            new AxeItem(ModToolMaterials.MYTHIUM, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.MYTHIUM, 6, -3.0f))));
+
+    public static final Item MYTHIUM_HELMET = registerItem("mythium_helmet",
+            new ArmorItem(ModArmorMaterials.MYTHIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(37))));
+    public static final Item MYTHIUM_CHESTPLATE = registerItem("mythium_chestplate",
+            new ArmorItem(ModArmorMaterials.MYTHIUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(37))));
+    public static final Item MYTHIUM_LEGGINGS = registerItem("mythium_leggings",
+            new ArmorItem(ModArmorMaterials.MYTHIUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(37))));
+    public static final Item MYTHIUM_BOOTS = registerItem("mythium_boots",
+            new ArmorItem(ModArmorMaterials.MYTHIUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(37))));
+    public static final Item MYTHIUM_HAMMER = registerItem("mythium_hammer",
+            new MythiumHammerItem(ModToolMaterials.MYTHIUM, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.MYTHIUM, 7, -3.4f))));
 
     private static Item registerItem(String id, Item item) {
         return Registry.register(Registries.ITEM, Trivaton.id(id), item);

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "trivaton:mythium_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "MMM",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "trivaton:mythium_hammer"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "mythium",
+  "description": {
+    "color": "#0094FF",
+    "translate": "trim_material.trivaton.mythium"
+  },
+  "ingredient": "trivaton:mythium_ingot",
+  "item_model_index": 0.9
+}

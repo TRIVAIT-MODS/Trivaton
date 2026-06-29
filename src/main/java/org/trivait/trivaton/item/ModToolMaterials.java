@@ -14,7 +14,8 @@ import net.minecraft.registry.tag.TagKey;
 
 public enum ModToolMaterials implements ToolMaterial {
 
-    THIORITE(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2250, 9.0F, 4.0F, 20, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.THIORITE_INGOT}));
+    THIORITE(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 8.0F, 3.0F, 10, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.THIORITE_INGOT})),
+    MYTHIUM(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2532, 10.0F, 5.0F, 30, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.MYTHIUM_INGOT}));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

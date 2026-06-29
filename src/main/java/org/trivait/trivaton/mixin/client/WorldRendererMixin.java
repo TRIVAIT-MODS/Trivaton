@@ -47,10 +47,10 @@ public abstract class WorldRendererMixin {
             if (cameraEntity instanceof PlayerEntity player) {
                 ItemStack heldItem = player.getMainHandStack();
 
-                if (heldItem.getItem() instanceof HammerItem) {
+                if (heldItem.getItem() instanceof HammerItem hammerItem) {
                     BlockPos initialPos = blockHitResult.getBlockPos();
 
-                    List<BlockPos> extraBlocks = HammerItem.getBlocksToBeDestroyed(1, initialPos, player);
+                    List<BlockPos> extraBlocks = hammerItem.getBlocksToBeDestroyed(1, initialPos, player);
 
                     VertexConsumerProvider.Immediate immediate = this.client.getBufferBuilders().getEntityVertexConsumers();
                     VertexConsumer vertexConsumer = immediate.getBuffer(RenderLayer.getLines());

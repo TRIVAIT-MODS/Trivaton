@@ -29,6 +29,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.THIORITE_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.THIORITE_BLOCK,
                 "thiorite_block_from_thiorite_ingots", null,
                 "thiorite_ingot_from_thiorite_block", null);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.MYTHIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MYTHIUM_BLOCK);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRIVATON_MUSIC_DISC)
                 .pattern("T  ")
@@ -177,6 +178,81 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('C', ModItems.THIORITE_CRYSTAL)
                 .criterion(hasItem(ModItems.THIORITE_CRYSTAL), conditionsFromItem(ModItems.THIORITE_CRYSTAL))
                 .offerTo(exporter, Trivaton.id("thiorite_boots_2"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHIUM_AXE)
+                .pattern("MM ")
+                .pattern("MS ")
+                .pattern(" S ")
+                .input('M', ModItems.MYTHIUM_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
+                .offerTo(exporter, Trivaton.id("mythium_axe_1"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHIUM_AXE)
+                .pattern(" MM")
+                .pattern(" SM")
+                .pattern(" S ")
+                .input('M', ModItems.MYTHIUM_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
+                .offerTo(exporter, Trivaton.id("mythium_axe_2"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHIUM_SHOVEL)
+                .pattern(" M ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('S', Items.STICK)
+                .input('M', ModItems.MYTHIUM_INGOT)
+                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHIUM_PICKAXE)
+                .pattern("MMM")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('M', ModItems.MYTHIUM_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHIUM_HAMMER)
+                .pattern("MMM")
+                .pattern("MMM")
+                .pattern(" S ")
+                .input('M', ModItems.MYTHIUM_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHIUM_SWORD)
+                .pattern("M")
+                .pattern("M")
+                .pattern("S")
+                .input('M', ModItems.MYTHIUM_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHIUM_HELMET)
+                .pattern("MMM")
+                .pattern("M M")
+                .input('M', ModItems.MYTHIUM_INGOT)
+                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHIUM_CHESTPLATE)
+                .pattern("M M")
+                .pattern("MMM")
+                .pattern("MMM")
+                .input('M', ModItems.MYTHIUM_INGOT)
+                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHIUM_LEGGINGS)
+                .pattern("MMM")
+                .pattern("M M")
+                .pattern("M M")
+                .input('M', ModItems.MYTHIUM_INGOT)
+                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHIUM_BOOTS)
+                .pattern("M M")
+                .pattern("M M")
+                .input('M', ModItems.MYTHIUM_INGOT)
+                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
+                .offerTo(exporter);
 
         StonecuttingRecipeJsonBuilder.createStonecutting(Ingredient.ofItems(ModBlocks.THIORITE_STONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.THIORITE_STONE_SLAB, 2)
                 .criterion(hasItem(ModBlocks.THIORITE_STONE), conditionsFromItem(ModBlocks.THIORITE_STONE))

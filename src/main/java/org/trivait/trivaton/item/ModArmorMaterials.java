@@ -25,6 +25,15 @@ public class ModArmorMaterials {
                 map.put(ArmorItem.Type.BODY, 11);
             }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.THIORITE_INGOT),
                     List.of(new ArmorMaterial.Layer(Trivaton.id("thiorite"))), 0,0));
+    public static final RegistryEntry<ArmorMaterial> MYTHIUM_ARMOR_MATERIAL = registerArmorMaterial("mythium",
+            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+                map.put(ArmorItem.Type.BOOTS, 5);
+                map.put(ArmorItem.Type.LEGGINGS, 8);
+                map.put(ArmorItem.Type.CHESTPLATE, 10);
+                map.put(ArmorItem.Type.HELMET, 5);
+                map.put(ArmorItem.Type.BODY, 15);
+            }), 35, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.THIORITE_INGOT),
+                    List.of(new ArmorMaterial.Layer(Trivaton.id("mythium"))), 0,0));
 
 
     public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material) {

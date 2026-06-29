@@ -22,6 +22,17 @@
   "item.trivaton.thiorite_boots": "Thiorite Boots",
   "item.trivaton.thiorite_hammer": "Thiorite Hammer",
   "item.trivaton.mythium_ingot": "Mythium Ingot",
+  "item.trivaton.mythium_axe": "Mythium Axe",
+  "item.trivaton.mythium_pickaxe": "Mythium Pickaxe",
+  "item.trivaton.mythium_shovel": "Mythium Shovel",
+  "item.trivaton.mythium_sword": "Mythium Sword",
+  "item.trivaton.mythium_helmet": "Mythium Helmet",
+  "item.trivaton.mythium_leggings": "Mythium Leggings",
+  "item.trivaton.mythium_chestplate": "Mythium Chestplate",
+  "item.trivaton.mythium_boots": "Mythium Boots",
+  "item.trivaton.mythium_hammer": "Mythium Hammer",
+
+  "item.trivaton.hammer.desc": "Mines ",
 
   "item.trivaton.trivaton_music_disc": "Music Disc",
   "item.trivaton.trivaton_music_disc.desc": "_ - Trivaton",
@@ -44,8 +55,10 @@
   "block.trivaton.thiorite_stone_bricks_wall": "Thiorite Stone Brick Wall",
   "block.trivaton.thiorite_block": "Block of Thiorite",
   "block.trivaton.generator": "Generator",
+  "block.trivaton.mythium_block": "Mythium Block",
 
   "trim_material.trivaton.thiorite": "Trhiorite",
+  "trim_material.trivaton.mythium": "Mythium",
 
   "sounds.trivaton.generator": "Generator Noise"
 }

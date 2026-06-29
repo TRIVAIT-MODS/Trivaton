@@ -17,6 +17,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THIORITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENRICHED_THIORITE_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MYTHIUM_BLOCK);
 
         TextureMap circuit_board_textures = new TextureMap()
                 .put(TextureKey.TOP, Trivaton.id("block/circuit_board_crafter_top"))
@@ -60,10 +61,20 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.THIORITE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.THIORITE_HAMMER, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.MYTHIUM_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MYTHIUM_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MYTHIUM_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MYTHIUM_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MYTHIUM_HAMMER, Models.HANDHELD);
+
         itemModelGenerator.registerArmor((ArmorItem) ModItems.THIORITE_HELMET);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.THIORITE_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.THIORITE_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.THIORITE_BOOTS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.MYTHIUM_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.MYTHIUM_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.MYTHIUM_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.MYTHIUM_BOOTS);
 
         itemModelGenerator.register(ModItems.CREATIVE_CIRCUIT_BOARD, Models.GENERATED);
 

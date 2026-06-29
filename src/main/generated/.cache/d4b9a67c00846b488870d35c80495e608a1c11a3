@@ -1,8 +1,9 @@
-// 1.21.1	2026-06-28T23:11:39.7578919	Trivaton/Block Loot Tables
+// 1.21.1	2026-06-29T14:11:17.8467728	Trivaton/Block Loot Tables
 539bf6cc8779ccf514db2a9bf091015b90d74707 data\trivaton\loot_table\blocks\polished_thiorite_stone.json
 4eb6af184d99c801172a9a552ee2fb0c065ac103 data\trivaton\loot_table\blocks\polished_thiorite_stone_stairs.json
 36d34aa6d4b7d318d6e7572f0560e42cecd5624f data\trivaton\loot_table\blocks\thiorite_stone_bricks_slab.json
 23dfa8b36a93ce72930f3fa21a29716724a99e9b data\trivaton\loot_table\blocks\thiorite_stone_stairs.json
+6ee20ed555253bd3b1a9efcc7ab03ac54d66d150 data\trivaton\loot_table\blocks\mythium_block.json
 2243ee872ada60fa77235117d386aace81280349 data\trivaton\loot_table\blocks\thiorite_block.json
 e09982a1d605f90dd34566b81fcd9303d2757cac data\trivaton\loot_table\blocks\thiorite_stone_bricks.json
 a9cb3236aa8ebf7ad2d373d6093719f1db8d37aa data\trivaton\loot_table\blocks\circuit_board_crafter.json

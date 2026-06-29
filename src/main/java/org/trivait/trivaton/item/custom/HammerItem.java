@@ -2,10 +2,15 @@ package org.trivait.trivaton.item.custom;
 
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.MiningToolItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Style;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
@@ -19,11 +24,16 @@ public class HammerItem extends MiningToolItem {
         super(material, BlockTags.PICKAXE_MINEABLE, settings);
     }
 
-    public static List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initalBlockPos, PlayerEntity player) {
+    public List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initalBlockPos, PlayerEntity player) {
         List<BlockPos> positions = new ArrayList<>();
         HitResult hit = player.raycast(player.getAttributeValue(EntityAttributes.PLAYER_BLOCK_INTERACTION_RANGE), 0, false);
         if (hit.getType() == HitResult.Type.BLOCK) {
             BlockHitResult blockHit = (BlockHitResult) hit;
+
+            if (player.isSneaking()) {
+                positions.add(blockHit.getBlockPos());
+                return positions;
+            }
 
             if(blockHit.getSide() == Direction.DOWN || blockHit.getSide() == Direction.UP) {
                 for(int x = -range; x <= range; x++) {
@@ -51,5 +61,11 @@ public class HammerItem extends MiningToolItem {
         }
 
         return positions;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        Text text = Text.translatable("item.trivaton.hammer.desc").setStyle(Style.EMPTY.withColor(Formatting.GRAY)).append(Text.literal("3x3x1").setStyle(Style.EMPTY.withColor(Formatting.AQUA)));
+        tooltip.add(text);
     }
 }
