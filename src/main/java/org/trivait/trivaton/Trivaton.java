@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.util.Identifier;
 
+import net.minecraft.util.Language;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.trivait.trivaton.block.ModBlocks;
@@ -17,6 +18,9 @@ import org.trivait.trivaton.recipe.ModRecipes;
 import org.trivait.trivaton.sound.ModSounds;
 import org.trivait.trivaton.util.HammerUsageEvent;
 import org.trivait.trivaton.world.gen.ModWorldGeneration;
+
+// In mod I used code by KaupenJoe: https://github.com/Tutorials-By-Kaupenjoe/Fabric-Tutorial-1.21.X/blob/main/LICENSE
+// MIT License!
 
 public class Trivaton implements ModInitializer {
 	public static final String MOD_ID = "trivaton";

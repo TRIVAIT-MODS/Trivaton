@@ -1,0 +1,18 @@
+{
+  "type": "trivaton:generator",
+  "center": {
+    "item": "minecraft:andesite"
+  },
+  "sides": [
+    {
+      "item": "minecraft:tuff"
+    },
+    {
+      "item": "minecraft:tuff"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "trivaton:thiorite_stone"
+  }
+}

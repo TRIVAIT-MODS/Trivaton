@@ -1,0 +1,36 @@
+{
+  "type": "trivaton:generator",
+  "center": {
+    "item": "trivaton:thiorite_ingot"
+  },
+  "sides": [
+    {
+      "item": "trivaton:thiorite_shard"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "trivaton:thiorite_shard"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "trivaton:thiorite_shard"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "trivaton:thiorite_shard"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "trivaton:music_disc_base"
+  }
+}

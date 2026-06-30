@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mythium_ingot": {
+    "has_music_disc_base": {
       "conditions": {
         "items": [
           {
-            "items": "trivaton:mythium_ingot"
+            "items": "trivaton:music_disc_base"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_mythium_ingot"
+      "has_music_disc_base"
     ]
   ],
   "rewards": {

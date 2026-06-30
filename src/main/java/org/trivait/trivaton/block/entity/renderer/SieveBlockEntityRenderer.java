@@ -44,7 +44,9 @@ public class SieveBlockEntityRenderer implements BlockEntityRenderer<SieveBlockE
         matrices.push();
         matrices.translate(0.5, 0.87, 0.5);
         matrices.scale(0.5f, 0.5f, 0.5f);
+        matrices.translate(0, -((double) entity.getProgress() / 240), 0);
         renderItem(input.copyWithCount(1), itemRenderer, entity, 0.5f, matrices, vertexConsumers);
+        matrices.translate(0, ((double) entity.getProgress() / 240), 0);
         matrices.translate(0.6, 0, 0.6);
         renderItem(input.copyWithCount(input.getCount()-1), itemRenderer, entity, 0.5f, matrices, vertexConsumers);
         matrices.pop();

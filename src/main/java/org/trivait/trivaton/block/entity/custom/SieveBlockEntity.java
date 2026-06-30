@@ -100,10 +100,7 @@ public class SieveBlockEntity extends BlockEntity implements ExtendedScreenHandl
 
     @Override
     public int[] getAvailableSlots(Direction side) {
-        if (side == Direction.DOWN || side != Direction.UP) {
-            return new int[]{1, 2, 3, 4, 5, 6};
-        }
-        return new int[]{0};
+        return new int[]{1, 2, 3, 4, 5, 6};
     }
 
     @Override
@@ -131,6 +128,7 @@ public class SieveBlockEntity extends BlockEntity implements ExtendedScreenHandl
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInv, PlayerEntity player) {
         return new SieveScreenHandler(syncId, playerInv, this, this.propertyDelegate);
     }
+
     @Override
     protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registries) {
         super.writeNbt(nbt, registries);
@@ -279,39 +277,39 @@ public class SieveBlockEntity extends BlockEntity implements ExtendedScreenHandl
     }
 
     private void increaseCraftingProgress() {
-                this.progress++;
-            }
+        this.progress++;
+    }
 
-            private boolean hasRecipe() {
-                Optional<RecipeEntry<SieveRecipe>> recipe = getCurrentRecipe();
-                if (recipe.isEmpty()) return false;
+    private boolean hasRecipe() {
+        Optional<RecipeEntry<SieveRecipe>> recipe = getCurrentRecipe();
+        if (recipe.isEmpty()) return false;
 
-                for (int slot = FIRST_OUTPUT_SLOT; slot <= LAST_OUTPUT_SLOT; slot++) {
-                    if (this.getStack(slot).isEmpty()) return true;
-                    if (ItemStack.areItemsAndComponentsEqual(this.getStack(slot), recipe.get().value().output())
-                            && this.getStack(slot).getCount() < this.getStack(slot).getMaxCount()) {
-                        return true;
-                    }
-                }
-                return false;
-            }
-
-            private Optional<RecipeEntry<SieveRecipe>> getCurrentRecipe() {
-                if (this.world == null) return Optional.empty();
-                return this.world.getRecipeManager().getFirstMatch(ModRecipes.SIEVE_TYPE,
-                        new SieveRecipeInput(inventory.get(INPUT_SLOT)), this.world);
-            }
-
-            @Nullable
-            @Override
-            public Packet<ClientPlayPacketListener> toUpdatePacket() {
-                return BlockEntityUpdateS2CPacket.create(this);
-            }
-
-            @Override
-            public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registries) {
-                NbtCompound nbt = new NbtCompound();
-                this.writeNbt(nbt, registries);
-                return nbt;
+        for (int slot = FIRST_OUTPUT_SLOT; slot <= LAST_OUTPUT_SLOT; slot++) {
+            if (this.getStack(slot).isEmpty()) return true;
+            if (ItemStack.areItemsAndComponentsEqual(this.getStack(slot), recipe.get().value().output())
+                    && this.getStack(slot).getCount() < this.getStack(slot).getMaxCount()) {
+                return true;
             }
         }
+        return false;
+    }
+
+    private Optional<RecipeEntry<SieveRecipe>> getCurrentRecipe() {
+        if (this.world == null) return Optional.empty();
+        return this.world.getRecipeManager().getFirstMatch(ModRecipes.SIEVE_TYPE,
+                new SieveRecipeInput(inventory.get(INPUT_SLOT)), this.world);
+    }
+
+    @Nullable
+    @Override
+    public Packet<ClientPlayPacketListener> toUpdatePacket() {
+        return BlockEntityUpdateS2CPacket.create(this);
+    }
+
+    @Override
+    public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registries) {
+        NbtCompound nbt = new NbtCompound();
+        this.writeNbt(nbt, registries);
+        return nbt;
+    }
+}

@@ -62,6 +62,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.THIORITE_HAMMER);
 
+                        entries.add(ModItems.MUSIC_DISC_BASE);
                         entries.add(ModItems.TRIVATON_MUSIC_DISC);
 
                         entries.add(ModItems.MYTHIUM_INGOT);
@@ -75,6 +76,8 @@ public class ModItemGroups {
                         entries.add(ModItems.MYTHIUM_LEGGINGS);
                         entries.add(ModItems.MYTHIUM_BOOTS);
                         entries.add(ModItems.MYTHIUM_HAMMER);
+
+                        entries.add(ModBlocks.MYTHIUM_STAND);
                     }).build());
 
     public static void register() {

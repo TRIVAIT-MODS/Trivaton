@@ -1,0 +1,20 @@
+{
+  "type": "trivaton:generator",
+  "center": {
+    "tag": "minecraft:trim_templates"
+  },
+  "sides": [
+    { "item": "minecraft:echo_shard" },
+    { "item": "minecraft:sculk" },
+    { "item": "minecraft:echo_shard" },
+    { "item": "minecraft:sculk" },
+    { "item": "minecraft:echo_shard" },
+    { "item": "minecraft:sculk" },
+    { "item": "minecraft:echo_shard" },
+    { "item": "minecraft:sculk" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:silence_armor_trim_smithing_template"
+  }
+}

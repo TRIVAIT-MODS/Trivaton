@@ -1,21 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "E": {
-      "item": "trivaton:enriched_thiorite_ingot"
+  "ingredients": [
+    {
+      "item": "trivaton:music_disc_base"
     },
-    "M": {
-      "item": "trivaton:mythium_ingot"
-    },
-    "T": {
+    {
       "item": "trivaton:thiorite_ingot"
+    },
+    {
+      "item": "trivaton:mythium_ingot"
     }
-  },
-  "pattern": [
-    "T  ",
-    " E ",
-    "  M"
   ],
   "result": {
     "count": 1,

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.StonecuttingRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -31,14 +32,78 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 "thiorite_ingot_from_thiorite_block", null);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.MYTHIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MYTHIUM_BLOCK);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRIVATON_MUSIC_DISC)
-                .pattern("T  ")
-                .pattern(" E ")
-                .pattern("  M")
-                .input('T', ModItems.THIORITE_INGOT)
-                .input('E', ModItems.ENRICHED_THIORITE_INGOT)
-                .input('M', ModItems.MYTHIUM_INGOT)
-                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSIC_DISC_13)
+                .input(ModItems.MUSIC_DISC_BASE)
+                .input(Items.YELLOW_DYE)
+                .input(Items.WHITE_DYE)
+                .criterion(hasItem(ModItems.MUSIC_DISC_BASE), conditionsFromItem(ModItems.MUSIC_DISC_BASE))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSIC_DISC_CAT)
+                .input(ModItems.MUSIC_DISC_BASE)
+                .input(Items.GREEN_DYE)
+                .input(Items.GREEN_DYE)
+                .criterion(hasItem(ModItems.MUSIC_DISC_BASE), conditionsFromItem(ModItems.MUSIC_DISC_BASE))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSIC_DISC_BLOCKS)
+                .input(ModItems.MUSIC_DISC_BASE)
+                .input(Items.ORANGE_DYE)
+                .input(Items.ORANGE_DYE)
+                .criterion(hasItem(ModItems.MUSIC_DISC_BASE), conditionsFromItem(ModItems.MUSIC_DISC_BASE))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSIC_DISC_CHIRP)
+                .input(ModItems.MUSIC_DISC_BASE)
+                .input(Items.RED_DYE)
+                .input(Items.RED_DYE)
+                .criterion(hasItem(ModItems.MUSIC_DISC_BASE), conditionsFromItem(ModItems.MUSIC_DISC_BASE))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSIC_DISC_FAR)
+                .input(ModItems.MUSIC_DISC_BASE)
+                .input(Items.LIME_DYE)
+                .input(Items.LIME_DYE)
+                .criterion(hasItem(ModItems.MUSIC_DISC_BASE), conditionsFromItem(ModItems.MUSIC_DISC_BASE))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSIC_DISC_MALL)
+                .input(ModItems.MUSIC_DISC_BASE)
+                .input(Items.BLUE_DYE)
+                .input(Items.BLUE_DYE)
+                .criterion(hasItem(ModItems.MUSIC_DISC_BASE), conditionsFromItem(ModItems.MUSIC_DISC_BASE))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSIC_DISC_MELLOHI)
+                .input(ModItems.MUSIC_DISC_BASE)
+                .input(Items.PURPLE_DYE)
+                .input(Items.WHITE_DYE)
+                .criterion(hasItem(ModItems.MUSIC_DISC_BASE), conditionsFromItem(ModItems.MUSIC_DISC_BASE))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSIC_DISC_STAL)
+                .input(ModItems.MUSIC_DISC_BASE)
+                .input(Items.BLACK_DYE)
+                .input(Items.BLACK_DYE)
+                .criterion(hasItem(ModItems.MUSIC_DISC_BASE), conditionsFromItem(ModItems.MUSIC_DISC_BASE))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSIC_DISC_STRAD)
+                .input(ModItems.MUSIC_DISC_BASE)
+                .input(Items.WHITE_DYE)
+                .input(Items.WHITE_DYE)
+                .criterion(hasItem(ModItems.MUSIC_DISC_BASE), conditionsFromItem(ModItems.MUSIC_DISC_BASE))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSIC_DISC_WARD)
+                .input(ModItems.MUSIC_DISC_BASE)
+                .input(Items.GREEN_DYE)
+                .input(Items.LIME_DYE)
+                .criterion(hasItem(ModItems.MUSIC_DISC_BASE), conditionsFromItem(ModItems.MUSIC_DISC_BASE))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MUSIC_DISC_WAIT)
+                .input(ModItems.MUSIC_DISC_BASE)
+                .input(Items.LIGHT_BLUE_DYE)
+                .input(Items.LIGHT_BLUE_DYE)
+                .criterion(hasItem(ModItems.MUSIC_DISC_BASE), conditionsFromItem(ModItems.MUSIC_DISC_BASE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRIVATON_MUSIC_DISC)
+                .input(ModItems.MUSIC_DISC_BASE)
+                .input(ModItems.THIORITE_INGOT)
+                .input(ModItems.MYTHIUM_INGOT)
+                .criterion(hasItem(ModItems.MUSIC_DISC_BASE), conditionsFromItem(ModItems.MUSIC_DISC_BASE))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SIEVE)
@@ -47,8 +112,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("CCC")
                 .input('T', ModBlocks.THIORITE_STONE)
                 .input('S', Items.STRING)
-                .input('C', Items.COPPER_INGOT)
+                .input('C', Items.IRON_INGOT)
                 .criterion(hasItem(ModBlocks.THIORITE_STONE), conditionsFromItem(ModBlocks.THIORITE_STONE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MYTHIUM_STAND)
+                .pattern("I")
+                .pattern("M")
+                .pattern("B")
+                .input('I', Items.IRON_INGOT)
+                .input('M', ModItems.MYTHIUM_INGOT)
+                .input('B', Items.BLACKSTONE)
+                .criterion(hasItem(ModItems.MYTHIUM_INGOT), conditionsFromItem(ModItems.MYTHIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ENRICHED_THIORITE_STONE)

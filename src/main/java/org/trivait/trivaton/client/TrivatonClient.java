@@ -10,6 +10,7 @@ import net.minecraft.text.TranslatableTextContent;
 import org.trivait.trivaton.block.ModBlocks;
 import org.trivait.trivaton.block.entity.ModBlockEntities;
 import org.trivait.trivaton.block.entity.renderer.GeneratorBlockEntityRender;
+import org.trivait.trivaton.block.entity.renderer.MythiumStandBlockEntityRenderer;
 import org.trivait.trivaton.block.entity.renderer.SieveBlockEntityRenderer;
 import org.trivait.trivaton.gui.ModScreenHandlers;
 import org.trivait.trivaton.gui.custom.CircuitBoardCrafterScreen;
@@ -23,6 +24,7 @@ public class TrivatonClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockEntityRendererFactories.register(ModBlockEntities.SIEVE_BE, SieveBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(ModBlockEntities.GENERATOR_BE, GeneratorBlockEntityRender::new);
+        BlockEntityRendererFactories.register(ModBlockEntities.MYTHIUM_STAND_BE, MythiumStandBlockEntityRenderer::new);
 
         HandledScreens.register(ModScreenHandlers.SIEVE_SCREEN_HANDLER, SieveScreen::new);
         HandledScreens.register(ModScreenHandlers.CIRCUIT_BOARD_CRAFTER_SCREEN_HANDLER, CircuitBoardCrafterScreen::new);

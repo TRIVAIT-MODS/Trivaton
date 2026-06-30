@@ -96,6 +96,25 @@ public class CircuitBoardCrafterBlockEntity extends BlockEntity implements Exten
     }
 
     @Override
+    public int[] getAvailableSlots(Direction side) {
+        return new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    }
+
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction direction) {
+        if (stack.getItem() instanceof CircuitBoardItem) {
+            return slot == CIRCUIT_BOARD_SLOT;
+        }
+
+        return slot !=OUTPUT_SLOT&&slot!=CIRCUIT_BOARD_SLOT;
+    }
+
+    @Override
+    public boolean canExtract(int slot, ItemStack stack, Direction direction) {
+        return slot == OUTPUT_SLOT;
+    }
+
+    @Override
     public BlockPos getScreenOpeningData(ServerPlayerEntity player) {
         return this.pos;
     }

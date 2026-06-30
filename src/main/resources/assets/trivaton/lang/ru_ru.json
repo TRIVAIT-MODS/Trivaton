@@ -9,10 +9,10 @@
   "item.trivaton.creative_circuit_board": "Творческая плата",
   "item.trivaton.circuit_board.desc": "Уровень: ",
   "item.trivaton.circuit_board.desc2": "Энергии осталось: ",
-  "item.trivaton.thiorite_crystal": "Тиоритовый кристал",
+  "item.trivaton.thiorite_crystal": "Тиоритовый кристалл",
   "item.trivaton.thiorite_axe": "Тиоритовый топор",
   "item.trivaton.thiorite_pickaxe": "Тиоритовая кирка",
-  "item.trivaton.thiorite_shovel": "Тиоритова ломпта",
+  "item.trivaton.thiorite_shovel": "Тиоритова лопата",
   "item.trivaton.thiorite_sword": "Тиоритовый меч",
   "item.trivaton.thiorite_helmet": "Тиоритовый шлем",
   "item.trivaton.thiorite_leggings": "Тиоритовые поножи",
@@ -33,12 +33,13 @@
   "item.trivaton.hammer.desc": "Копает ",
 
   "item.trivaton.trivaton_music_disc": "Пластинка",
+  "item.trivaton.music_disc_base": "Основа для пластинки",
 
   "block.trivaton.thiorite_stone": "Каменный тиорит",
   "block.trivaton.enriched_thiorite_stone": "Обогащенный каменный тиорит",
   "block.trivaton.sieve": "Сито",
   "block.trivaton.circuit_board_crafter": "Верстак плат",
-  "block.trivaton.thiorite_crystal_generator": "Генератор тиоритовых кристалов",
+  "block.trivaton.thiorite_crystal_generator": "Генератор тиоритовых кристаллов",
   "block.trivaton.thiorite_stone_stairs": "Ступени из тиоритового камня",
   "block.trivaton.thiorite_stone_slab": "Плита из тиоритового камня",
   "block.trivaton.thiorite_stone_wall": "Ограда из тиоритового камня",
@@ -53,9 +54,13 @@
   "block.trivaton.thiorite_block": "Тиоритовый блок",
   "block.trivaton.generator": "Генератор",
   "block.trivaton.mythium_block": "Мифийный блок",
+  "block.trivaton.mythium_stand": "Мифийная стойка",
 
   "trim_material.trivaton.thiorite": "Тиоритовая",
   "trim_material.trivaton.mythium": "Мифийная",
 
-  "sounds.trivaton.generator": "Шум генератора"
+  "sounds.trivaton.generator": "Шум генератора",
+
+  "modmenu.summaryTranslation.trivaton": "Индустриальный мод, добавляющий тиорит, мифий и другие интересные вещи.",
+  "modmenu.descriptionTranslation.trivaton": "Индустриальный мод, добавляющий тиорит, мифий и другие интересные вещи."
 }

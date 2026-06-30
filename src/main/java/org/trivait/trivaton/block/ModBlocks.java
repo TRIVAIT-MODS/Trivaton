@@ -1,16 +1,19 @@
 package org.trivait.trivaton.block;
 
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import org.trivait.trivaton.Trivaton;
 import org.trivait.trivaton.block.custom.CircuitBoardCrafterBlock;
 import org.trivait.trivaton.block.custom.GeneratorBlock;
 import org.trivait.trivaton.block.custom.SieveBlock;
 import org.trivait.trivaton.block.custom.ThioriteCrystalGeneratorBlock;
+import org.trivait.trivaton.block.custom.MythiumStandBlock;
 
 public class ModBlocks {
 
@@ -24,9 +27,9 @@ public class ModBlocks {
             new SlabBlock(AbstractBlock.Settings.copy(Blocks.TUFF_SLAB)));
 
     public static final Block ENRICHED_THIORITE_STONE = registerBlock("enriched_thiorite_stone", new Block(AbstractBlock.Settings.copy(Blocks.TUFF)));
-    public static final Block SIEVE = registerBlock("sieve", new SieveBlock(AbstractBlock.Settings.copy(Blocks.COPPER_BLOCK)));
+    public static final Block SIEVE = registerBlock("sieve", new SieveBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).nonOpaque()));
     public static final Block CIRCUIT_BOARD_CRAFTER = registerBlock("circuit_board_crafter", new CircuitBoardCrafterBlock(AbstractBlock.Settings.copy(Blocks.TUFF)));
-    public static final Block THIORITE_CRYSTAL_GENERATOR = registerBlock("thiorite_crystal_generator", new ThioriteCrystalGeneratorBlock(AbstractBlock.Settings.copy(Blocks.GLASS)));
+    public static final Block THIORITE_CRYSTAL_GENERATOR = registerBlock("thiorite_crystal_generator", new ThioriteCrystalGeneratorBlock(AbstractBlock.Settings.copy(Blocks.GLASS).nonOpaque()));
 
     public static final Block POLISHED_THIORITE_STONE = registerBlock("polished_thiorite_stone", new Block(AbstractBlock.Settings.copy(Blocks.POLISHED_TUFF)));
     public static final Block POLISHED_THIORITE_STONE_WALL = registerBlock("polished_thiorite_stone_wall",
@@ -48,9 +51,12 @@ public class ModBlocks {
 
     public static final Block THIORITE_BLOCK = registerBlock("thiorite_block", new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
 
-    public static final Block GENERATOR = registerBlock("generator", new GeneratorBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+    public static final Block GENERATOR = registerBlock("generator", new GeneratorBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).nonOpaque()));
 
     public static final Block MYTHIUM_BLOCK = registerBlock("mythium_block", new Block(AbstractBlock.Settings.copy(Blocks.LAPIS_BLOCK)));
+
+    public static final Block MYTHIUM_STAND = registerBlock("mythium_stand", new MythiumStandBlock(AbstractBlock.Settings.create()
+            .sounds(BlockSoundGroup.METAL).luminance((state)->1).breakInstantly().mapColor(MapColor.GRAY).pistonBehavior(PistonBehavior.DESTROY).nonOpaque()));
 
     private static Block registerBlock(String name, Block block){
         Identifier id = Trivaton.id(name);

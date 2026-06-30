@@ -26,6 +26,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.trivait.trivaton.block.entity.ImplementedInventory;
@@ -261,6 +262,25 @@ public class GeneratorBlockEntity extends BlockEntity implements ExtendedScreenH
         }
 
         return stack.getDamage() >= stack.getMaxDamage();
+    }
+
+    @Override
+    public int[] getAvailableSlots(Direction side) {
+        return new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    }
+
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction direction) {
+        if (stack.getItem() instanceof CircuitBoardItem) {
+            return slot == CIRCUIT_BOARD_SLOT;
+        }
+
+        return slot !=OUTPUT_SLOT&&slot!=CIRCUIT_BOARD_SLOT;
+    }
+
+    @Override
+    public boolean canExtract(int slot, ItemStack stack, Direction direction) {
+        return slot == OUTPUT_SLOT;
     }
 
     private void craftItem() {

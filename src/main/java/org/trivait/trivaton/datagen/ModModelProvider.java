@@ -81,5 +81,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TRIVATON_MUSIC_DISC, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.MYTHIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MUSIC_DISC_BASE, Models.GENERATED);
     }
 }

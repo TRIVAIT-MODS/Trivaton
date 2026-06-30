@@ -3,13 +3,14 @@
 	"id": "trivaton",
 	"version": "${version}",
 	"name": "Trivaton",
-	"description": "",
+	"description": "An industrial mod that adds Thiorite, Mythium, and other interesting things.",
 	"authors": [
 		"TRIVAIT"
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/user/Trivait",
-		"sources": "https://github.com/TRIVAIT-MODS/Trivaton"
+		"sources": "https://github.com/TRIVAIT-MODS/Trivaton",
+		"issues": "https://github.com/TRIVAIT-MODS/Trivaton/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/trivaton/icon.png",

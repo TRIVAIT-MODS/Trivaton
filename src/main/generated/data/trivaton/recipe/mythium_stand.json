@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blackstone"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "M": {
+      "item": "trivaton:mythium_ingot"
+    }
+  },
+  "pattern": [
+    "I",
+    "M",
+    "B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "trivaton:mythium_stand"
+  }
+}

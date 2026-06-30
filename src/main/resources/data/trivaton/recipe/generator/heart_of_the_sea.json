@@ -1,0 +1,20 @@
+{
+  "type": "trivaton:generator",
+  "center": {
+    "item": "minecraft:sea_lantern"
+  },
+  "sides": [
+    { "item": "minecraft:prismarine_crystals" },
+    { "item": "minecraft:prismarine" },
+    { "item": "minecraft:prismarine_crystals" },
+    { "item": "minecraft:prismarine" },
+    { "item": "minecraft:prismarine_crystals" },
+    { "item": "minecraft:prismarine" },
+    { "item": "minecraft:prismarine_crystals" },
+    { "item": "minecraft:prismarine" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:heart_of_the_sea"
+  }
+}

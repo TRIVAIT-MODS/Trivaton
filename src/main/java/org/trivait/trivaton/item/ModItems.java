@@ -89,6 +89,7 @@ public class ModItems {
     public static final Item MYTHIUM_HAMMER = registerItem("mythium_hammer",
             new MythiumHammerItem(ModToolMaterials.MYTHIUM, new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.MYTHIUM, 7, -3.4f))));
+    public static final Item MUSIC_DISC_BASE = registerItem("music_disc_base", new Item(new Item.Settings().maxCount(1)));
 
     private static Item registerItem(String id, Item item) {
         return Registry.register(Registries.ITEM, Trivaton.id(id), item);

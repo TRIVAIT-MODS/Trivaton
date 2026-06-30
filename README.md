@@ -1,2 +1,4 @@
 # Trivaton
-My first big server-side mod!
+
+An industrial mod that adds Thiorite, Mythium, and other interesting things.
+

@@ -32,10 +32,12 @@
   "item.trivaton.mythium_boots": "Mythium Boots",
   "item.trivaton.mythium_hammer": "Mythium Hammer",
 
+  "item.trivaton.music_disc_base": "Music Disc Base",
+
   "item.trivaton.hammer.desc": "Mines ",
 
   "item.trivaton.trivaton_music_disc": "Music Disc",
-  "item.trivaton.trivaton_music_disc.desc": "_ - Trivaton",
+  "item.trivaton.trivaton_music_disc.desc": "Beehunter - Apoplexy",
 
   "block.trivaton.thiorite_stone": "Thiorite Stone",
   "block.trivaton.enriched_thiorite_stone": "Enriched Thiorite Stone",
@@ -56,6 +58,7 @@
   "block.trivaton.thiorite_block": "Block of Thiorite",
   "block.trivaton.generator": "Generator",
   "block.trivaton.mythium_block": "Mythium Block",
+  "block.trivaton.mythium_stand": "Mythium Stand",
 
   "trim_material.trivaton.thiorite": "Trhiorite",
   "trim_material.trivaton.mythium": "Mythium",
